@@ -53,7 +53,7 @@
       /* Garis Vertikal Timeline */
       .timeline-line {
         position: absolute;
-        left: 170px;
+        left: 165px;
         top: 10px;
         bottom: 0;
         width: 1px;
@@ -1175,7 +1175,6 @@
             <span class="tech-badge">Payment Gateway</span>
           </div>
 
-          <!-- Gunakan gambar banner baznas yang ada di aset -->
           <img
             src="assets/Baznas Jateng.png"
             alt="BAZNAS Jateng Portal"
@@ -1318,6 +1317,181 @@
                     <li>
                       Menambal kerentanan keamanan dengan enkripsi data personal
                       muzakki untuk mematuhi regulasi perlindungan data privasi.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PROYEK 2: JEMPUTIN ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">November 15, 2023</span>
+          <span class="version-badge">v1.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">
+            Jemputin - Circular Economy & Waste Management
+          </h3>
+          <div>
+            <span class="tech-badge">HTML/CSS/JS</span>
+            <span class="tech-badge">Bootstrap 5</span>
+            <span class="tech-badge">Chart.js</span>
+            <span class="tech-badge">Leaflet.js</span>
+          </div>
+
+          <!-- Pastikan gambar Jemputin berada di folder aset Anda -->
+          <img
+            src="assets/Jemputin.png"
+            alt="Jemputin App"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Platform sirkular ekonomi terpadu untuk mendaur ulang sampah
+              (Plastik, Kardus, Elektronik) dengan layanan penjemputan langsung
+              dari rumah (kurir).
+            </li>
+            <li>
+              Dashboard interaktif terpadu yang dilengkapi Kalkulator Emisi CO2
+              dan konversi sampah menjadi poin reward yang dapat dicairkan.
+            </li>
+            <li>
+              Direktori Bank Sampah berbasis peta (Map) untuk menemukan mitra
+              pengepul terdekat beserta status operasionalnya secara
+              <em>real-time</em>.
+            </li>
+            <li>
+              Modul Edukasi Lingkungan (Blog) komprehensif untuk meningkatkan
+              kesadaran masyarakat mengenai pemilahan sampah organik, daur ulang
+              plastik, dan bahaya E-Waste.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionJemputin">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingJemputin1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseJemputin1"
+                >
+                  UI/UX, Gamifikasi & Visualisasi Data
+                </button>
+              </h2>
+              <div
+                id="collapseJemputin1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionJemputin"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Mendesain antarmuka modern dengan pendekatan
+                      <em>Mesh Gradient</em> dan
+                      <em>Bento Grid Layout</em> untuk pengalaman pengguna yang
+                      sangat intuitif.
+                    </li>
+                    <li>
+                      Mengimplementasikan sistem pencairan poin dinamis yang
+                      terintegrasi penuh dengan simulator
+                      <em>QRIS Generator</em>, E-Wallet (GoPay, OVO, DANA), dan
+                      Transfer Bank.
+                    </li>
+                    <li>
+                      Pembuatan visualisasi data dinamis menggunakan pustaka
+                      <strong>Chart.js</strong> untuk menampilkan performa dan
+                      tren volume setoran sampah harian pengguna.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingJemputin2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseJemputin2"
+                >
+                  Integrasi Peta Interaktif & Manajemen Sesi
+                </button>
+              </h2>
+              <div
+                id="collapseJemputin2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionJemputin"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Pemanfaatan <strong>Leaflet.js</strong> untuk merender
+                      peta direktori bank sampah secara presisi, lengkap dengan
+                      <em>Custom Popup Marker</em> informatif.
+                    </li>
+                    <li>
+                      Membangun fitur pencarian lokasi mitra pengepul terdekat
+                      secara instan menggunakan algoritma
+                      <em>real-time string filtering</em>.
+                    </li>
+                    <li>
+                      Mengelola <em>state</em> aplikasi, autentikasi sesi login
+                      pengguna, dan seluruh riwayat transaksi
+                      (setoran/pencairan) secara lokal memanfaatkan arsitektur
+                      <code>LocalStorage</code> berbasis JSON.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingJemputin3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseJemputin3"
+                >
+                  Log Bug Fixes & Optimasi Front-End
+                </button>
+              </h2>
+              <div
+                id="collapseJemputin3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionJemputin"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Mengoptimalkan proses <em>rendering</em> gambar bukti
+                      timbangan (konversi <em>File-to-Base64</em>) guna mencegah
+                      isu <em>memory leak</em> pada browser peramban perangkat
+                      <em>mobile</em>.
+                    </li>
+                    <li>
+                      Memperbaiki <em>edge-case</em> pada form pencairan poin di
+                      mana pergantian opsi penarikan (QRIS/E-Wallet) gagal
+                      me-<em>reset placeholder</em> input nomor tujuan dengan
+                      benar.
+                    </li>
+                    <li>
+                      Menyesuaikan responsivitas tabel riwayat dan navigasi (<em
+                        >Mobile Menu</em
+                      >) agar tidak saling menumpuk (<em>layout overlap</em>)
+                      saat diakses melalui perangkat beresolusi layar kecil.
+                    </li>
+                    <li>
+                      Mengamankan data dari risiko <em>data loss</em> pada form
+                      formulir penjemputan dengan cara menarik data profil
+                      pengguna secara otomatis (<em>auto-fill session</em>).
                     </li>
                   </ul>
                 </div>
