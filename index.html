@@ -35,10 +35,11 @@
       .portfolio-header {
         max-width: 900px;
         margin: 0 auto;
-        padding: 40px 20px 20px;
+        padding: 40px 20px 40px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        text-align: center;
       }
 
       /* Timeline Container */
@@ -239,6 +240,7 @@
         .portfolio-header {
           flex-direction: column;
           gap: 20px;
+          align-items: center;
         }
         .timeline-line {
           left: 35px;
@@ -272,20 +274,32 @@
     </style>
   </head>
   <body>
-    <!-- Header -->
+    <!-- Header 1: Mining and Oil & Gas -->
     <header
       class="portfolio-header"
       data-aos="fade-down"
       data-aos-duration="800"
     >
-      <h1
-        style="font-size: 1.5rem; font-weight: 800; margin: 0; color: #111827"
-      >
-        ./Takhiyuddin.com
-      </h1>
+      <div>
+        <h1
+          style="font-size: 1.7rem; font-weight: 800; margin: 0; color: #111827"
+        >
+          ./Takhiyuddin.com
+        </h1>
+        <h2
+          style="
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 5px 0 0 0;
+          "
+        >
+          Pertambangan serta Minyak & Gas
+        </h2>
+      </div>
     </header>
 
-    <!-- Main Timeline -->
+    <!-- Main Timeline 1: Mining and Oil & Gas -->
     <main class="timeline-container">
       <div class="timeline-line"></div>
 
@@ -626,7 +640,9 @@
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
         <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
-          <h3 class="project-title">KendaliBBM - Enterprise Fuel Monitoring System</h3>
+          <h3 class="project-title">
+            KendaliBBM - Enterprise Fuel Monitoring System
+          </h3>
           <div>
             <span class="tech-badge">SwiftUI</span>
             <span class="tech-badge">Combine</span>
@@ -786,7 +802,9 @@
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
         <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
-          <h3 class="project-title">SentriSpace - Confined Space Entry Monitor</h3>
+          <h3 class="project-title">
+            SentriSpace - Confined Space Entry Monitor
+          </h3>
           <div>
             <span class="tech-badge">SwiftUI</span>
             <span class="tech-badge">Live Timers</span>
@@ -1086,6 +1104,220 @@
                       Optimalisasi alur caching data lokal menggunakan CoreData
                       untuk memastikan akses riwayat shift tetap berjalan tanpa
                       jeda.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ======================================================================= -->
+    <!-- SEKAT / PEMBATAS UNTUK KATEGORI BARU -->
+    <!-- ======================================================================= -->
+    <div class="container" style="margin-top: 40px; margin-bottom: 20px">
+      <hr
+        style="
+          border: 0;
+          height: 1px;
+          background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0)
+          );
+        "
+      />
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- HEADER KATEGORI 2: PELAYANAN PUBLIK -->
+    <!-- ======================================================================= -->
+    <header
+      class="portfolio-header"
+      data-aos="fade-down"
+      data-aos-duration="800"
+    >
+      <div>
+        <h2
+          style="
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 5px 0 0 0;
+          "
+        >
+          Pelayanan Publik
+        </h2>
+      </div>
+    </header>
+
+    <!-- Main Timeline 2: Pelayanan Publik -->
+    <main class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <!-- ==================== PROYEK 1: BAZNAS JATENG ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">Maret 10, 2024</span>
+          <span class="version-badge">v2.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">BAZNAS Jateng - ZIS Management Portal</h3>
+          <div>
+            <span class="tech-badge">Bootstrap 5</span>
+            <span class="tech-badge">Laravel (MVC)</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Payment Gateway</span>
+          </div>
+
+          <!-- Gunakan gambar banner baznas yang ada di aset -->
+          <img
+            src="assets/Baznas Jateng.png"
+            alt="BAZNAS Jateng Portal"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Platform pelayanan publik terpadu untuk optimalisasi pengumpulan
+              dan pendistribusian Zakat, Infak, dan Sedekah (ZIS) di wilayah
+              Provinsi Jawa Tengah.
+            </li>
+            <li>
+              Sistem manajemen keuangan yang transparan dan akuntabel berbasis
+              teknologi informasi untuk menjamin pelaporan yang
+              <em>real-time</em> kepada muzakki.
+            </li>
+            <li>
+              Integrasi sistem pendataan mustahik berbasis wilayah guna
+              memastikan penyaluran dana ZIS efektif dalam program pengentasan
+              kemiskinan.
+            </li>
+            <li>
+              Fitur <em>Customer Service</em> responsif (Floating WhatsApp)
+              untuk memberikan pelayanan prima kepada seluruh pemangku
+              kepentingan zakat.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionBaznas">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingBaznas1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseBaznas1"
+                >
+                  Arsitektur & Tantangan Integrasi Data
+                </button>
+              </h2>
+              <div
+                id="collapseBaznas1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionBaznas"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Menerapkan basis data terpusat untuk mengkoordinasikan
+                      informasi muzakki dan mustahik dari berbagai BAZNAS
+                      Kabupaten/Kota di Jawa Tengah.
+                    </li>
+                    <li>
+                      Membangun <em>dashboard</em> eksekutif untuk memantau
+                      indikator sasaran strategis, termasuk pertumbuhan
+                      pengumpulan zakat secara nasional.
+                    </li>
+                    <li>
+                      Mengembangkan API terstandarisasi untuk sinkronisasi data
+                      pelaporan operasional dengan lembaga pemerintah daerah
+                      secara aman.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingBaznas2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseBaznas2"
+                >
+                  Implementasi UI/UX & Pelayanan Prima
+                </button>
+              </h2>
+              <div
+                id="collapseBaznas2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionBaznas"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Mendesain antarmuka <em>user-friendly</em> yang bersih
+                      (clean UI) menggunakan pedoman <em>accessibility</em> agar
+                      mudah digunakan oleh berbagai kalangan usia.
+                    </li>
+                    <li>
+                      Mengintegrasikan
+                      <em>Multi-channel Payment Gateway</em> untuk memfasilitasi
+                      kemudahan berdonasi secara instan dan aman dari perangkat
+                      mobile maupun desktop.
+                    </li>
+                    <li>
+                      Pembuatan komponen
+                      <em>Floating Dock Navigation</em> khusus untuk perangkat
+                      mobile guna mempercepat akses ke menu utama (Beranda,
+                      Profil, Donasi).
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingBaznas3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseBaznas3"
+                >
+                  Log Bug Fixes & Optimasi Kinerja
+                </button>
+              </h2>
+              <div
+                id="collapseBaznas3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionBaznas"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Mengoptimalkan performa server (Load Balancing) untuk
+                      menangani lonjakan <em>traffic</em> (traffic spike) akses
+                      donatur yang tinggi pada bulan Ramadhan.
+                    </li>
+                    <li>
+                      Menyelesaikan masalah <em>asynchronous rendering</em> pada
+                      struktur organisasi (Org Chart) agar tampil rapi di
+                      resolusi layar <em>smartphone</em> yang sempit.
+                    </li>
+                    <li>
+                      Menerapkan sistem kompresi aset gambar (WebP) dan
+                      <em>lazy loading</em> untuk mempercepat waktu muat halaman
+                      dokumentasi penghargaan BAZNAS.
+                    </li>
+                    <li>
+                      Menambal kerentanan keamanan dengan enkripsi data personal
+                      muzakki untuk mematuhi regulasi perlindungan data privasi.
                     </li>
                   </ul>
                 </div>
