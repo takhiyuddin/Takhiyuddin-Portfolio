@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio iOS Developer - Sistem Industri</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS untuk Desain Timeline & Animasi (Light Mode) -->
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #111;
+        overflow-x: hidden;
+      }
+
+      /* Top Header */
+      .portfolio-header {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Timeline Container */
+      .timeline-container {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px 60px;
+      }
+
+      /* Garis Vertikal Timeline */
+      .timeline-line {
+        position: absolute;
+        left: 170px;
+        top: 10px;
+        bottom: 0;
+        width: 1px;
+        background-color: #e5e7eb;
+        z-index: 1;
+      }
+
+      /* Struktur Item Timeline */
+      .timeline-item {
+        position: relative;
+        display: flex;
+        margin-bottom: 70px;
+        z-index: 2;
+      }
+
+      /* Kolom Kiri (Sticky) */
+      .timeline-left {
+        width: 140px;
+        text-align: left;
+        padding-right: 30px;
+        flex-shrink: 0;
+        padding-top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 30px;
+        align-self: flex-start;
+        z-index: 10;
+      }
+
+      .date-text {
+        color: #6b7280;
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .version-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border: 1px solid #e4e4e7;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 0.75rem;
+        background-color: #ffffff;
+        color: #09090b;
+        line-height: 1.2;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+        transition: all 0.3s ease;
+      }
+
+      /* Titik Hitam (Sticky) */
+      .timeline-marker {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 30px;
+        align-self: flex-start;
+        z-index: 10;
+      }
+
+      .timeline-dot {
+        width: 11px;
+        height: 11px;
+        background-color: #000;
+        border-radius: 50%;
+        outline: 6px solid #f8f9fa;
+        margin-top: 4px;
+        transition:
+          transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+          background-color 0.3s ease;
+      }
+
+      .timeline-item:hover .timeline-dot {
+        transform: scale(1.5);
+        background-color: #4b5563;
+      }
+
+      /* Kolom Kanan (Konten Proyek) */
+      .timeline-right {
+        flex-grow: 1;
+        padding-left: 20px;
+      }
+
+      .project-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #111827;
+        transition: color 0.3s ease;
+      }
+
+      .tech-badge {
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: #4b5563;
+        background-color: #ffffff;
+        border: 1px solid #e5e7eb;
+        padding: 4px 10px;
+        border-radius: 20px;
+        margin-right: 6px;
+        margin-bottom: 10px;
+        display: inline-block;
+        transition: all 0.3s ease;
+        cursor: default;
+      }
+
+      .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+        margin: 20px 0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          box-shadow 0.5s ease;
+      }
+
+      .project-image:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* List Fitur */
+      .feature-list {
+        list-style-type: none;
+        padding-left: 0;
+        color: #374151;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+
+      .feature-list li {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 8px;
+      }
+
+      .feature-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #9ca3af;
+      }
+
+      /* Accordion */
+      .accordion-item {
+        border: none;
+        border-bottom: 1px solid #e5e7eb;
+        background: transparent;
+      }
+
+      .accordion-item:first-of-type {
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .accordion-button {
+        padding: 15px 0;
+        font-weight: 600;
+        color: #374151;
+        background: transparent !important;
+        box-shadow: none !important;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+
+      .accordion-button:not(.collapsed) {
+        color: #000;
+      }
+
+      .accordion-body {
+        padding: 10px 0 20px 0;
+        font-size: 0.9rem;
+        color: #4b5563;
+        line-height: 1.6;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .portfolio-header {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .timeline-line {
+          left: 35px;
+        }
+        .timeline-item {
+          flex-direction: column;
+          padding-left: 55px;
+        }
+        .timeline-left,
+        .timeline-marker {
+          position: relative;
+          top: auto;
+          align-self: auto;
+        }
+        .timeline-left {
+          text-align: left;
+          padding-right: 0;
+          margin-bottom: 15px;
+          width: auto;
+        }
+        .timeline-marker {
+          position: absolute;
+          left: 10px;
+          top: 0;
+          width: auto;
+        }
+        .timeline-right {
+          padding-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="portfolio-header"
+      data-aos="fade-down"
+      data-aos-duration="800"
+    >
+      <h1
+        style="font-size: 1.5rem; font-weight: 800; margin: 0; color: #111827"
+      >
+        ./Takhiyuddin.com
+      </h1>
+    </header>
+
+    <!-- Main Timeline -->
+    <main class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <!-- ==================== PROYEK 1: TATABUMI ERP ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">Januari 15, 2026</span>
+          <span class="version-badge">v5.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">TataBumi: Mining Operations ERP</h3>
+          <div>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">Combine (MVVM)</span>
+            <span class="tech-badge">Swift Charts</span>
+            <span class="tech-badge">MapKit</span>
+          </div>
+
+          <img
+            src="assets/TataBumi.png"
+            alt="TataBumi App"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Aplikasi <em>Enterprise Resource Planning</em> (ERP) komprehensif
+              untuk sektor pertambangan dengan arsitektur
+              <em>Router-based View</em> yang modular dan scalable.
+            </li>
+            <li>
+              Sistem monitoring Produksi (Pit to Port) secara real-time yang
+              menyediakan visualisasi grafik target vs aktual harian secara
+              interaktif.
+            </li>
+            <li>
+              Integrasi modul manajemen aset alat berat untuk melacak status
+              operasional, jadwal servis berkala, dan konsumsi suku cadang.
+            </li>
+            <li>
+              Fitur manajemen multi-user berbasis peran (Role-Based Access
+              Control) untuk operator lapangan, mandor, hingga level direksi.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionTataBumi">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTataBumi1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTataBumi1"
+                >
+                  Arsitektur & Tantangan Skalabilitas
+                </button>
+              </h2>
+              <div
+                id="collapseTataBumi1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionTataBumi"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Menerapkan pola arsitektur MVVM murni dikombinasikan
+                      dengan <code>EnvironmentObject</code> untuk injeksi
+                      dependensi antar modul (Produksi, IoT, Logistik, HR).
+                    </li>
+                    <li>
+                      Mengembangkan custom <em>Router-View</em> untuk mengatur
+                      navigasi kompleks secara dinamis tanpa membebani
+                      <code>NavigationStack</code> utama.
+                    </li>
+                    <li>
+                      Memisahkan lapisan layanan jaringan (Network Layer)
+                      menggunakan protokol generik untuk memastikan kemudahan
+                      unit testing pada setiap ViewModel.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTataBumi2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTataBumi2"
+                >
+                  Implementasi IoT & Geotagging
+                </button>
+              </h2>
+              <div
+                id="collapseTataBumi2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionTataBumi"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Integrasi <strong>MapKit</strong> untuk melacak pergerakan
+                      aset berat dalam Site Plan (Geotagging) menggunakan
+                      <code>MKMapView</code> yang di-custom secara spesifik.
+                    </li>
+                    <li>
+                      Streaming data sensor IoT dinamis (pH air, pergeseran
+                      lereng radar, kualitas udara) secara real-time melalui
+                      koneksi WebSocket.
+                    </li>
+                    <li>
+                      Decoding payload data sensor berat secara asinkron
+                      menggunakan operator Combine untuk menjaga kelancaran UI
+                      thread.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTataBumi3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTataBumi3"
+                >
+                  Log Bug Fixes & Optimasi
+                </button>
+              </h2>
+              <div
+                id="collapseTataBumi3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionTataBumi"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Mengatasi memory leak pada MapKit saat memuat lebih dari
+                      1000 <em>annotations</em> secara bersamaan dengan
+                      menerapkan sistem <code>MKAnnotationView</code>
+                      clustering.
+                    </li>
+                    <li>
+                      Menyelesaikan masalah <em>race condition</em> pada
+                      sinkronisasi data offline saat user kehilangan sinyal di
+                      area tambang terpencil.
+                    </li>
+                    <li>
+                      Mengoptimalkan perenderan Swift Charts dari kompleksitas
+                      O(n²) ke O(n) dengan melakukan pra-agregasi data di level
+                      ViewModel.
+                    </li>
+                    <li>
+                      Memperbaiki bug crash saat transisi orientasi perangkat
+                      (portrait ke landscape) pada halaman laporan analitik
+                      besar.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PROYEK 2: NIRWANA ESG ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">Oktober 01, 2025</span>
+          <span class="version-badge">v4.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">
+            Nirwana: ESG Analytics & Waste Management
+          </h3>
+          <div>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">Charts Data-Viz</span>
+            <span class="tech-badge">CoreLocation</span>
+          </div>
+
+          <img
+            src="assets/Nirwana.png"
+            alt="Nirwana ESG App"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Portal aplikasi <em>Dual-Role</em> yang memfasilitasi akses
+              lapangan untuk pelaporan manifest limbah dan Dashboard Executive
+              untuk level HQ secara terpadu.
+            </li>
+            <li>
+              Sistem audit lingkungan otomatis untuk memantau emisi karbon,
+              pengolahan limbah B3, dan reklamasi lahan bekas tambang.
+            </li>
+            <li>
+              Pencatatan pelaporan insiden lingkungan secara instan lengkap
+              dengan lampiran foto geotagging dan status penanganan darurat.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionNirwana">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNirwana1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNirwana1"
+                >
+                  Fokus Pengalaman Pengguna (UX)
+                </button>
+              </h2>
+              <div
+                id="collapseNirwana1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionNirwana"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Memastikan peringatan darurat segera terlihat dengan
+                      mendesain komponen <strong>HazardAlertCard</strong> dan
+                      <strong>ExecutiveKPICard</strong> yang intuitif.
+                    </li>
+                    <li>
+                      Memanfaatkan <code>AnyShapeStyle</code> dan gradasi warna
+                      dinamis yang otomatis menyesuaikan mode terang/gelap untuk
+                      menjamin visibilitas tinggi di bawah teriknya sinar
+                      matahari lapangan.
+                    </li>
+                    <li>
+                      Menyederhanakan alur input data manifest limbah dari 5
+                      langkah menjadi 2 langkah untuk efisiensi operator di
+                      lapangan.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNirwana2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNirwana2"
+                >
+                  Reaktivitas Alert & Visualisasi Data
+                </button>
+              </h2>
+              <div
+                id="collapseNirwana2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionNirwana"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Pencatatan sampel air (pH & TSS) secara otomatis memicu
+                      <strong>Hazard Alert</strong> apabila nilai berada di luar
+                      ambang batas baku mutu industri.
+                    </li>
+                    <li>
+                      Implementasi
+                      <strong>Swift Charts (LineMark & AreaMark)</strong> dengan
+                      anotasi kustom untuk menampilkan tren historis kualitas
+                      air beserta indikator batas aman.
+                    </li>
+                    <li>
+                      Fitur ekspor laporan ESG otomatis ke format PDF langsung
+                      dari perangkat iOS untuk keperluan audit eksternal.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNirwana3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNirwana3"
+                >
+                  Log Bug Fixes & Optimasi
+                </button>
+              </h2>
+              <div
+                id="collapseNirwana3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionNirwana"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Memperbaiki masalah <em>layout break</em> (UI terpotong)
+                      pada layar kecil seperti iPhone SE ketika menampilkan
+                      lebih dari 5 parameter limbah sekaligus.
+                    </li>
+                    <li>
+                      Mengatasi delay pada <code>CoreLocation</code> yang
+                      sebelumnya menyebabkan manifest limbah tercatat dengan
+                      koordinat lokasi tidak akurat.
+                    </li>
+                    <li>
+                      Mengurangi ukuran <em>payload</em> API sebesar 40% melalui
+                      implementasi kompresi JSON di sisi klien sebelum proses
+                      pengiriman data.
+                    </li>
+                    <li>
+                      Menghilangkan lag saat melakukan scrolling pada daftar
+                      riwayat limbah harian yang panjang dengan teknik
+                      <code>LazyVStack</code> yang optimal.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PROYEK 3: KENDALIBBM ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">Mei 15, 2025</span>
+          <span class="version-badge">v3.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">KendaliBBM: Enterprise Fuel Monitoring</h3>
+          <div>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">Combine</span>
+            <span class="tech-badge">Rule-Engine</span>
+          </div>
+
+          <img
+            src="assets/KendaliBBM.png"
+            alt="Fuel Monitoring System"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Mengontrol distribusi pasokan solar secara akurat dari Truk Tangki
+              menuju seluruh armada alat berat (Excavator, Dump Truck,
+              Bulldozer) di site pertambangan.
+            </li>
+            <li>
+              Pencatatan meteran digital berbasis QR/Barcode scanner untuk
+              memastikan validitas data pengisian bahan bakar di lapangan.
+            </li>
+            <li>
+              Fitur deteksi dini penyimpangan konsumsi bahan bakar menggunakan
+              analisis rasio efisiensi mesin (Burn Rate).
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionKendaliBBM">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingKendali1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseKendali1"
+                >
+                  Pengamanan Audit Keuangan
+                </button>
+              </h2>
+              <div
+                id="collapseKendali1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionKendaliBBM"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Modul <em>Security Audit</em> pada Command Center
+                      Eksekutif untuk meminimalisir pembengkakan biaya
+                      operasional akibat kebocoran atau kecurangan distribusi.
+                    </li>
+                    <li>
+                      Pengumpulan otomatis seluruh log pengisian yang masuk
+                      kategori anomali berdasarkan standar rasio Burn Rate
+                      mesin.
+                    </li>
+                    <li>
+                      Sinkronisasi instan data investigasi anomali bahan bakar
+                      langsung kepada tim finansial pusat untuk tindakan lanjut.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingKendali2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseKendali2"
+                >
+                  Custom Gauge & Rule-Engine
+                </button>
+              </h2>
+              <div
+                id="collapseKendali2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionKendaliBBM"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Membangun komponen
+                      <strong>Circular Capacity Gauge</strong> reaktif
+                      menggunakan <code>Path</code> dan
+                      <code>AnimatableData</code> di SwiftUI yang otomatis
+                      berubah warna saat kapasitas tangki mencapai tingkat
+                      kritis.
+                    </li>
+                    <li>
+                      Penerapan <em>Rule-Engine</em> di sisi klien yang langsung
+                      memberikan <em>flagging</em> jika input volume BBM
+                      melampaui kapasitas maksimal tangki spesifik alat berat.
+                    </li>
+                    <li>
+                      Validasi input numerik ketat untuk mencegah kesalahan
+                      pengetikan volume BBM oleh operator pengisian di lapangan.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingKendali3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseKendali3"
+                >
+                  Log Bug Fixes & Optimasi
+                </button>
+              </h2>
+              <div
+                id="collapseKendali3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionKendaliBBM"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Memperbaiki masalah akurasi animasi pada
+                      <em>Circular Gauge</em> yang sebelumnya mengalami
+                      <em>stuttering</em> (patah-patah) saat menerima stream
+                      data dengan frekuensi tinggi.
+                    </li>
+                    <li>
+                      Menyelesaikan error duplikasi UUID pada protokol
+                      <code>Identifiable</code> di list armada yang memicu crash
+                      aplikasi saat proses scrolling cepat.
+                    </li>
+                    <li>
+                      Melakukan refactor pada alur <em>Publisher</em> di Combine
+                      untuk menghindari eksekusi ulang pemanggilan API yang
+                      tidak perlu.
+                    </li>
+                    <li>
+                      Mengoptimalkan manajemen cache gambar profil alat berat
+                      untuk mempercepat waktu muat daftar armada.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PROYEK 4: SENTRISPACE ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">Januari 10, 2025</span>
+          <span class="version-badge">v2.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">SentriSpace: Confined Space Monitor</h3>
+          <div>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">Live Timers</span>
+            <span class="tech-badge">Safety-First UI</span>
+          </div>
+
+          <img
+            src="assets/SentriSpace.png"
+            alt="Confined Space Entry Monitor"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Platform monitoring <strong>Health & Safety</strong> khusus bagi
+              petugas pengawas keselamatan ruang terbatas (Hole Watcher).
+            </li>
+            <li>
+              Manajemen izin kerja (Permit to Work) digital sebelum personel
+              diperbolehkan memasuki area tangki atau lubang tambang tertutup.
+            </li>
+            <li>
+              Pencatatan durasi shift kerja personel di dalam ruang terbatas
+              secara presisi untuk mencegah kelelahan dan paparan gas berbahaya.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionSentriSpace">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSentri1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSentri1"
+                >
+                  Sistem Live Timers & Efisiensi Thread
+                </button>
+              </h2>
+              <div
+                id="collapseSentri1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionSentriSpace"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Memanfaatkan Native <code>Text(_:style: .timer)</code> di
+                      SwiftUI untuk melacak durasi bekerja pekerja di dalam
+                      tangki secara <em>live</em>.
+                    </li>
+                    <li>
+                      Memastikan durasi berjalan secara persisten pada level
+                      sistem operasi tanpa membebani CPU pada
+                      <em>Main Thread</em>.
+                    </li>
+                    <li>
+                      Menjaga konsumsi daya baterai perangkat tetap rendah
+                      meskipun aplikasi berjalan di latar belakang dalam waktu
+                      lama.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSentri2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSentri2"
+                >
+                  Sistem Pemicu Alarm Evakuasi
+                </button>
+              </h2>
+              <div
+                id="collapseSentri2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionSentriSpace"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Pencatatan log gas berkala (Oksigen, Hidrogen Sulfida,
+                      LEL) melalui validator lokal di dalam aplikasi.
+                    </li>
+                    <li>
+                      Pemicuan otomatis <strong>Alarm Evakuasi</strong> dengan
+                      visual warna merah menyala apabila metrik keselamatan
+                      dilanggar.
+                    </li>
+                    <li>
+                      Integrasi <em>Haptic Feedback</em> intensif menggunakan
+                      <code>UIImpactFeedbackGenerator</code> untuk memberikan
+                      peringatan taktil darurat kepada pengawas.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSentri3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSentri3"
+                >
+                  Log Bug Fixes & Optimasi
+                </button>
+              </h2>
+              <div
+                id="collapseSentri3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionSentriSpace"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Memperbaiki bug timer yang ter-reset secara tidak sengaja
+                      ketika aplikasi masuk ke fase
+                      <em>Background State</em> dengan komputasi selisih
+                      <code>Date()</code> saat aplikasi kembali aktif
+                      (<em>resume</em>).
+                    </li>
+                    <li>
+                      Menyelesaikan masalah kesalahan input desimal pada
+                      keyboard iOS yang memicu <em>false alarm</em> pada
+                      parameter LEL (Lower Explosive Limit).
+                    </li>
+                    <li>
+                      Meringankan beban render UI dengan menerapkan
+                      <code>@ViewBuilder</code> yang lebih modular pada komponen
+                      formulir pemeriksaan.
+                    </li>
+                    <li>
+                      Memperbaiki masalah sinkronisasi notifikasi push lokal
+                      saat perangkat kehilangan koneksi internet di dalam ruang
+                      bawah tanah.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PROYEK 5: ESTAFET ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">Agustus 12, 2024</span>
+          <span class="version-badge">v1.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">Estafet: Digital Shift Handover</h3>
+          <div>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">State Management</span>
+          </div>
+
+          <img
+            src="assets/Estafet.png"
+            alt="Digital Handover Dashboard"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Aplikasi peralihan operasional antar-shift yang menghubungkan
+              secara mulus antara operator masuk, operator keluar, dan mandor
+              lapangan.
+            </li>
+            <li>
+              Menghapuskan ketergantungan pada buku catatan fisik konvensional
+              untuk meminimalkan risiko kehilangan data serah terima alat.
+            </li>
+            <li>
+              Penyediaan riwayat digital transparan yang dapat diakses kapan
+              saja untuk keperluan investigasi kendala operasional shift
+              sebelumnya.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionEstafet">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEstafet1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEstafet1"
+                >
+                  Workflow Acknowledgment & Keamanan
+                </button>
+              </h2>
+              <div
+                id="collapseEstafet1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionEstafet"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Mengembangkan sistem <em>Acknowledgment Workflow</em>
+                      (Terima & Mulai Giliran) yang terstruktur ketat.
+                    </li>
+                    <li>
+                      Sistem memblokir operator masuk untuk menghidupkan alat
+                      berat sebelum mereka selesai melakukan review digital
+                      daftar periksa mesin (Aman / Rusak) yang dilaporkan shift
+                      sebelumnya.
+                    </li>
+                    <li>
+                      Validasi tanda tangan digital sederhana menggunakan
+                      konfirmasi PIN aman untuk mengesahkan proses serah terima.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEstafet2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEstafet2"
+                >
+                  State Management Enum Tersandi
+                </button>
+              </h2>
+              <div
+                id="collapseEstafet2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionEstafet"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Dashboard Mandor dirancang untuk mengumpulkan seluruh log
+                      serah terima secara reaktif dan terpusat.
+                    </li>
+                    <li>
+                      Memodelkan status operasional menggunakan properti
+                      tersandi Swift Enum
+                      <code>(Normal, Warning, Breakdown)</code>.
+                    </li>
+                    <li>
+                      Mengikat state tersebut secara langsung dengan aset warna
+                      UI untuk menjamin konsistensi visual di seluruh komponen
+                      aplikasi.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEstafet3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEstafet3"
+                >
+                  Log Bug Fixes & Optimasi
+                </button>
+              </h2>
+              <div
+                id="collapseEstafet3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionEstafet"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Memperbaiki crash tak terduga pada
+                      <em>NavigationStack</em> ketika dua user (operator masuk &
+                      keluar) menekan tombol serah terima (<em>submit</em>)
+                      secara bersamaan.
+                    </li>
+                    <li>
+                      Mengatasi masalah state yang tidak langsung memutakhirkan
+                      tampilan (<em>Not Re-rendering</em>) pada Dashboard Mandor
+                      akibat penyalahgunaan objek <code>@State</code> statis
+                      (diperbaiki dengan migrasi ke <code>@StateObject</code>).
+                    </li>
+                    <li>
+                      Menerapkan fungsi <em>Debounce</em> pada form pencarian
+                      armada untuk meminimalisir pemanggilan server berlebihan
+                      saat pengguna mengetik cepat.
+                    </li>
+                    <li>
+                      Optimalisasi alur caching data lokal menggunakan CoreData
+                      untuk memastikan akses riwayat shift tetap berjalan tanpa
+                      jeda.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 80,
+        easing: "ease-out-cubic",
+        distance: "40px",
+      });
+    </script>
+  </body>
+</html>
