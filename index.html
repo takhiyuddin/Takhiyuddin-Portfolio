@@ -69,6 +69,11 @@
         z-index: 2;
       }
 
+      /* --- FIX: Menghilangkan margin bawah pada project terakhir setiap kategori --- */
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
       /* Kolom Kiri (Sticky) */
       .timeline-left {
         width: 140px;
@@ -300,7 +305,8 @@
     </header>
 
     <!-- Main Timeline 1: Mining and Oil & Gas -->
-    <main class="timeline-container">
+    <!-- FIX: Padding bawah disesuaikan menjadi 20px agar dekat dengan sekat -->
+    <main class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
       <!-- ==================== PROYEK 1: TATABUMI ERP ==================== -->
@@ -1117,7 +1123,8 @@
     <!-- ======================================================================= -->
     <!-- SEKAT / PEMBATAS UNTUK KATEGORI BARU -->
     <!-- ======================================================================= -->
-    <div class="container" style="margin-top: 40px; margin-bottom: 20px">
+    <!-- FIX: Margin disesuaikan (dikurangi) agar lebih pas dan proporsional -->
+    <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
         style="
           border: 0;
@@ -1135,10 +1142,12 @@
     <!-- ======================================================================= -->
     <!-- HEADER KATEGORI 2: PELAYANAN PUBLIK -->
     <!-- ======================================================================= -->
+    <!-- FIX: Padding atas dikurangi agar jaraknya proporsional -->
     <header
       class="portfolio-header"
       data-aos="fade-down"
       data-aos-duration="800"
+      style="padding-top: 10px"
     >
       <div>
         <h2
@@ -1345,7 +1354,6 @@
             <span class="tech-badge">Leaflet.js</span>
           </div>
 
-          <!-- Pastikan gambar Jemputin berada di folder aset Anda -->
           <img
             src="assets/Jemputin.png"
             alt="Jemputin App"
