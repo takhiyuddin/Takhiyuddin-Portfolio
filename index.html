@@ -305,15 +305,14 @@
     </header>
 
     <!-- Main Timeline 1: Mining and Oil & Gas -->
-    <!-- FIX: Padding bawah disesuaikan menjadi 20px agar dekat dengan sekat -->
     <main class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
       <!-- ==================== PROYEK 1: TATABUMI ERP ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Januari 15, 2026</span>
-          <span class="version-badge">v5.0</span>
+          <span class="date-text">2024 - 2026</span>
+          <span class="version-badge">v5.4.2</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
@@ -1123,7 +1122,6 @@
     <!-- ======================================================================= -->
     <!-- SEKAT / PEMBATAS UNTUK KATEGORI BARU -->
     <!-- ======================================================================= -->
-    <!-- FIX: Margin disesuaikan (dikurangi) agar lebih pas dan proporsional -->
     <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
         style="
@@ -1142,7 +1140,6 @@
     <!-- ======================================================================= -->
     <!-- HEADER KATEGORI 2: PELAYANAN PUBLIK -->
     <!-- ======================================================================= -->
-    <!-- FIX: Padding atas dikurangi agar jaraknya proporsional -->
     <header
       class="portfolio-header"
       data-aos="fade-down"
@@ -1164,7 +1161,7 @@
     </header>
 
     <!-- Main Timeline 2: Pelayanan Publik -->
-    <main class="timeline-container">
+    <main class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
       <!-- ==================== PROYEK 1: BAZNAS JATENG ==================== -->
@@ -1185,7 +1182,7 @@
           </div>
 
           <img
-            src="assets/Baznas Jateng.png"
+            src="assets/BaznasJateng.png"
             alt="BAZNAS Jateng Portal"
             class="project-image"
           />
@@ -1500,6 +1497,221 @@
                       Mengamankan data dari risiko <em>data loss</em> pada form
                       formulir penjemputan dengan cara menarik data profil
                       pengguna secara otomatis (<em>auto-fill session</em>).
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ======================================================================= -->
+    <!-- SEKAT / PEMBATAS UNTUK KATEGORI BARU 3 (E-COMMERCE) -->
+    <!-- ======================================================================= -->
+    <div class="container" style="margin-top: 10px; margin-bottom: 10px">
+      <hr
+        style="
+          border: 0;
+          height: 1px;
+          background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0)
+          );
+        "
+      />
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- HEADER KATEGORI 3: E-COMMERCE -->
+    <!-- ======================================================================= -->
+    <header
+      class="portfolio-header"
+      data-aos="fade-down"
+      data-aos-duration="800"
+      style="padding-top: 10px"
+    >
+      <div>
+        <h2
+          style="
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 5px 0 0 0;
+          "
+        >
+          E-Commerce
+        </h2>
+      </div>
+    </header>
+
+    <!-- Main Timeline 3: E-Commerce -->
+    <main class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <!-- ==================== PROYEK 1: APPLENATION ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">April 26, 2026</span>
+          <span class="version-badge">v1.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">AppleNation - Premium Apple Store App</h3>
+          <div>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">Combine</span>
+            <span class="tech-badge">State Management</span>
+            <span class="tech-badge">JSON Encoding</span>
+          </div>
+
+          <img
+            src="assets/AppleNation.png"
+            alt="AppleNation E-Commerce App"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Aplikasi <em>e-commerce</em> eksklusif berfokus pada penjualan
+              produk ekosistem Apple (iPhone baru & bekas) dengan UI/UX bertema
+              <em>Glassmorphism</em>.
+            </li>
+            <li>
+              Katalog interaktif yang dilengkapi fitur filter dinamis (pencarian
+              teks dan kategori kondisi) serta animasi perubahan harga
+              <em>real-time</em> saat memilih kapasitas memori.
+            </li>
+            <li>
+              Sistem <em>Checkout</em> terintegrasi yang menghitung subtotal
+              keranjang dan biaya opsi pengiriman logistik secara instan.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionAppleNation">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingAppleNation1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseAppleNation1"
+                >
+                  Manajemen State & Data Persisten
+                </button>
+              </h2>
+              <div
+                id="collapseAppleNation1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionAppleNation"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Menginjeksi <code>EnvironmentObject</code> secara global
+                      pada <code>WindowGroup</code> (CartManager, OrderManager,
+                      WishlistManager) agar state sinkron di seluruh tab
+                      navigasi (Katalog, Favorit, Keranjang).
+                    </li>
+                    <li>
+                      Membangun persistensi data lokal otomatis memanfaatkan
+                      <code>UserDefaults</code> dengan melakukan
+                      <em>encode/decode</em> objek model ke format JSON untuk
+                      menjaga riwayat transaksi tetap ada meskipun aplikasi
+                      ditutup.
+                    </li>
+                    <li>
+                      Penerapan properti <em>Observer</em> (<code
+                        >@Published</code
+                      >
+                      & <code>didSet</code>) untuk memicu fungsi penyimpanan
+                      lokal (<em>saveItems</em>) secara instan setiap kali
+                      terjadi perubahan isi keranjang.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingAppleNation2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseAppleNation2"
+                >
+                  Dinamika UI & Interaksi Pengguna
+                </button>
+              </h2>
+              <div
+                id="collapseAppleNation2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionAppleNation"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Implementasi sistem harga dinamis (<em>Dynamic Pricing</em
+                      >) yang mengalkulasi harga dasar ditambah marjin spesifik
+                      setiap varian kapasitas (dari 64GB hingga 1TB).
+                    </li>
+                    <li>
+                      Mendesain halaman detail produk yang reaktif: bayangan dan
+                      warna gambar iPhone (<em>hero image</em>) otomatis
+                      bertransisi menggunakan blok
+                      <code>.animation(.easeInOut)</code> saat pengguna memilih
+                      varian warna (<em>Color Picker</em>).
+                    </li>
+                    <li>
+                      Pembuatan <em>Custom TabView</em> dengan lencana (<em
+                        >badge indicator</em
+                      >) responsif yang selalu menampilkan jumlah total barang
+                      di dalam keranjang belanja pengguna.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingAppleNation3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseAppleNation3"
+                >
+                  Log Bug Fixes & Optimasi
+                </button>
+              </h2>
+              <div
+                id="collapseAppleNation3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionAppleNation"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Memperbaiki <em>compile error</em> terkait interpolasi
+                      harga total keranjang dengan membuang simbol mata uang
+                      tidak terdefinisi (<code>$</code>) dari blok
+                      <em>reducer</em> kalkulasi harga.
+                    </li>
+                    <li>
+                      Menyelesaikan masalah dependensi modul Combine dengan
+                      secara eksplisit melakukan
+                      <code>import Combine</code> pada komponen yang
+                      mengimplementasikan <em>Publishers</em> secara masif
+                      (WishlistView & OrdersView).
+                    </li>
+                    <li>
+                      Mengamankan alur navigasi <em>checkout</em>:
+                      menyembunyikan tombol <em>back</em> bawaan pada
+                      <code>SuccessView</code> untuk mencegah pelanggan
+                      melakukan duplikasi pengiriman data pesanan yang sama.
                     </li>
                   </ul>
                 </div>
