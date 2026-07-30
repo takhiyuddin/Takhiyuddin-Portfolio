@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +20,7 @@
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Custom CSS untuk Desain Timeline & Animasi (Light Mode) -->
+    <!-- Custom CSS for Timeline Design & Animation (Light Mode) -->
     <style>
       body {
         font-family:
@@ -50,7 +50,7 @@
         padding: 0 20px 60px;
       }
 
-      /* Garis Vertikal Timeline */
+      /* Vertical Timeline Line */
       .timeline-line {
         position: absolute;
         left: 165px;
@@ -61,7 +61,7 @@
         z-index: 1;
       }
 
-      /* Struktur Item Timeline */
+      /* Timeline Item Structure */
       .timeline-item {
         position: relative;
         display: flex;
@@ -69,12 +69,12 @@
         z-index: 2;
       }
 
-      /* Menghilangkan margin bawah pada project terakhir setiap kategori */
+      /* Remove bottom margin on the last project of each category */
       .timeline-item:last-child {
         margin-bottom: 0;
       }
 
-      /* Kolom Kiri (Sticky) */
+      /* Left Column (Sticky) */
       .timeline-left {
         width: 140px;
         text-align: left;
@@ -110,7 +110,7 @@
         transition: all 0.3s ease;
       }
 
-      /* Titik Hitam (Sticky) */
+      /* Black Dot (Sticky) */
       .timeline-marker {
         width: 30px;
         display: flex;
@@ -139,7 +139,7 @@
         background-color: #4b5563;
       }
 
-      /* Kolom Kanan (Konten Proyek) */
+      /* Right Column (Project Content) */
       .timeline-right {
         flex-grow: 1;
         padding-left: 20px;
@@ -185,7 +185,7 @@
         box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
       }
 
-      /* List Fitur */
+      /* Feature List */
       .feature-list {
         list-style-type: none;
         padding-left: 0;
@@ -313,7 +313,7 @@
       }
 
       /* ========================================= */
-      /* Back to Top Button Styles                 */
+      /* Back to Top Button Styles                */
       /* ========================================= */
       #backToTopBtn {
         position: fixed;
@@ -391,7 +391,7 @@
     <main class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
-      <!-- ==================== PROYEK 1: TATABUMI ERP ==================== -->
+      <!-- ==================== PROJECT 1: TATABUMI ERP ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
           <span class="date-text">2024 - 2026</span>
@@ -416,22 +416,22 @@
 
           <ul class="feature-list">
             <li>
-              Aplikasi <em>Enterprise Resource Planning</em> (ERP) komprehensif
-              untuk sektor pertambangan dengan arsitektur
-              <em>Router-based View</em> yang modular dan scalable.
+              Comprehensive <em>Enterprise Resource Planning</em> (ERP)
+              application for the mining sector with a modular and scalable
+              <em>Router-based View</em> architecture.
             </li>
             <li>
-              Sistem monitoring Produksi (Pit to Port) secara real-time yang
-              menyediakan visualisasi grafik target vs aktual harian secara
-              interaktif.
+              Real-time production monitoring system (Pit to Port) providing
+              interactive daily target vs. actual charts.
             </li>
             <li>
-              Integrasi modul manajemen aset alat berat untuk melacak status
-              operasional, jadwal servis berkala, dan konsumsi suku cadang.
+              Integration of heavy equipment asset management module to track
+              operational status, periodic service schedules, and spare parts
+              consumption.
             </li>
             <li>
-              Fitur manajemen multi-user berbasis peran (Role-Based Access
-              Control) untuk operator lapangan, mandor, hingga level direksi.
+              Role-Based Access Control (RBAC) multi-user management feature for
+              field operators, foremen, up to the board of directors.
             </li>
           </ul>
 
@@ -446,7 +446,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTataBumi1"
                 >
-                  Arsitektur & Tantangan Skalabilitas
+                  Architecture & Scalability Challenges
                 </button>
               </h2>
               <div
@@ -457,19 +457,18 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Menerapkan pola arsitektur MVVM murni dikombinasikan
-                      dengan <code>EnvironmentObject</code> untuk injeksi
-                      dependensi antar modul (Produksi, IoT, Logistik, HR).
+                      Implemented pure MVVM architecture combined with
+                      <code>EnvironmentObject</code> for dependency injection
+                      across modules (Production, IoT, Logistics, HR).
                     </li>
                     <li>
-                      Mengembangkan custom <em>Router-View</em> untuk mengatur
-                      navigasi kompleks secara dinamis tanpa membebani
-                      <code>NavigationStack</code> utama.
+                      Developed a custom <em>Router-View</em> to manage complex
+                      navigation dynamically without overloading the main
+                      <code>NavigationStack</code>.
                     </li>
                     <li>
-                      Memisahkan lapisan layanan jaringan (Network Layer)
-                      menggunakan protokol generik untuk memastikan kemudahan
-                      unit testing pada setiap ViewModel.
+                      Separated the network layer using generic protocols to
+                      ensure easy unit testing for each ViewModel.
                     </li>
                   </ul>
                 </div>
@@ -485,7 +484,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTataBumi2"
                 >
-                  Implementasi IoT & Geotagging
+                  IoT & Geotagging Implementation
                 </button>
               </h2>
               <div
@@ -496,19 +495,18 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Integrasi <strong>MapKit</strong> untuk melacak pergerakan
-                      aset berat dalam Site Plan (Geotagging) menggunakan
-                      <code>MKMapView</code> yang di-custom secara spesifik.
+                      Integrated **MapKit** to track heavy asset movements
+                      within the Site Plan (Geotagging) using highly customized
+                      <code>MKMapView</code>.
                     </li>
                     <li>
-                      Streaming data sensor IoT dinamis (pH air, pergeseran
-                      lereng radar, kualitas udara) secara real-time melalui
-                      koneksi WebSocket.
+                      Real-time streaming of dynamic IoT sensor data (water pH,
+                      radar slope displacement, air quality) via WebSocket
+                      connection.
                     </li>
                     <li>
-                      Decoding payload data sensor berat secara asinkron
-                      menggunakan operator Combine untuk menjaga kelancaran UI
-                      thread.
+                      Asynchronous decoding of heavy sensor data payloads using
+                      Combine operators to maintain a smooth UI thread.
                     </li>
                   </ul>
                 </div>
@@ -524,7 +522,7 @@
                   aria-expanded="false"
                   aria-controls="collapseTataBumi3"
                 >
-                  Log Bug Fixes & Optimasi
+                  Bug Fixes & Optimization Log
                 </button>
               </h2>
               <div
@@ -535,25 +533,22 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengatasi memory leak pada MapKit saat memuat lebih dari
-                      1000 <em>annotations</em> secara bersamaan dengan
-                      menerapkan sistem <code>MKAnnotationView</code>
-                      clustering.
+                      Resolved a memory leak in MapKit when loading over 1000
+                      <em>annotations</em> simultaneously by implementing an
+                      <code>MKAnnotationView</code> clustering system.
                     </li>
                     <li>
-                      Menyelesaikan masalah <em>race condition</em> pada
-                      sinkronisasi data offline saat user kehilangan sinyal di
-                      area tambang terpencil.
+                      Fixed a <em>race condition</em> issue in offline data
+                      synchronization when users lost signal in remote mining
+                      areas.
                     </li>
                     <li>
-                      Mengoptimalkan perenderan Swift Charts dari kompleksitas
-                      O(n²) ke O(n) dengan melakukan pra-agregasi data di level
-                      ViewModel.
+                      Optimized Swift Charts rendering from O(n²) to O(n)
+                      complexity by pre-aggregating data at the ViewModel level.
                     </li>
                     <li>
-                      Memperbaiki bug crash saat transisi orientasi perangkat
-                      (portrait ke landscape) pada halaman laporan analitik
-                      besar.
+                      Fixed a crash bug during device orientation transition
+                      (portrait to landscape) on large analytical report pages.
                     </li>
                   </ul>
                 </div>
@@ -563,10 +558,10 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 2: NIRWANA ESG ==================== -->
+      <!-- ==================== PROJECT 2: NIRWANA ESG ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Oktober 01, 2025</span>
+          <span class="date-text">October 01, 2025</span>
           <span class="version-badge">v4.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -589,17 +584,17 @@
 
           <ul class="feature-list">
             <li>
-              Portal aplikasi <em>Dual-Role</em> yang memfasilitasi akses
-              lapangan untuk pelaporan manifest limbah dan Dashboard Executive
-              untuk level HQ secara terpadu.
+              <em>Dual-Role</em> application portal facilitating field access
+              for waste manifest reporting and an Executive Dashboard for the HQ
+              level in an integrated manner.
             </li>
             <li>
-              Sistem audit lingkungan otomatis untuk memantau emisi karbon,
-              pengolahan limbah B3, dan reklamasi lahan bekas tambang.
+              Automated environmental audit system to monitor carbon emissions,
+              hazardous waste processing, and mine reclamation.
             </li>
             <li>
-              Pencatatan pelaporan insiden lingkungan secara instan lengkap
-              dengan lampiran foto geotagging dan status penanganan darurat.
+              Instant environmental incident reporting record complete with
+              geotagged photo attachments and emergency response status.
             </li>
           </ul>
 
@@ -614,7 +609,7 @@
                   aria-expanded="false"
                   aria-controls="collapseNirwana1"
                 >
-                  Fokus Pengalaman Pengguna (UX)
+                  User Experience (UX) Focus
                 </button>
               </h2>
               <div
@@ -625,20 +620,18 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memastikan peringatan darurat segera terlihat dengan
-                      mendesain komponen <strong>HazardAlertCard</strong> dan
-                      <strong>ExecutiveKPICard</strong> yang intuitif.
+                      Ensured emergency warnings are immediately visible by
+                      designing intuitive <strong>HazardAlertCard</strong> and
+                      <strong>ExecutiveKPICard</strong> components.
                     </li>
                     <li>
-                      Memanfaatkan <code>AnyShapeStyle</code> dan gradasi warna
-                      dinamis yang otomatis menyesuaikan mode terang/gelap untuk
-                      menjamin visibilitas tinggi di bawah teriknya sinar
-                      matahari lapangan.
+                      Utilized <code>AnyShapeStyle</code> and dynamic color
+                      gradients that automatically adjust to light/dark modes to
+                      ensure high visibility under the blazing field sun.
                     </li>
                     <li>
-                      Menyederhanakan alur input data manifest limbah dari 5
-                      langkah menjadi 2 langkah untuk efisiensi operator di
-                      lapangan.
+                      Simplified the waste manifest data input flow from 5 steps
+                      to 2 steps for field operator efficiency.
                     </li>
                   </ul>
                 </div>
@@ -654,7 +647,7 @@
                   aria-expanded="false"
                   aria-controls="collapseNirwana2"
                 >
-                  Reaktivitas Alert & Visualisasi Data
+                  Alert Reactivity & Data Visualization
                 </button>
               </h2>
               <div
@@ -665,19 +658,19 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Pencatatan sampel air (pH & TSS) secara otomatis memicu
-                      <strong>Hazard Alert</strong> apabila nilai berada di luar
-                      ambang batas baku mutu industri.
+                      Automated water sample recording (pH & TSS) triggers a
+                      <strong>Hazard Alert</strong> if values fall outside
+                      industrial quality standard thresholds.
                     </li>
                     <li>
-                      Implementasi
-                      <strong>Swift Charts (LineMark & AreaMark)</strong> dengan
-                      anotasi kustom untuk menampilkan tren historis kualitas
-                      air beserta indikator batas aman.
+                      Implemented
+                      <strong>Swift Charts (LineMark & AreaMark)</strong> with
+                      custom annotations to display historical water quality
+                      trends along with safe limit indicators.
                     </li>
                     <li>
-                      Fitur ekspor laporan ESG otomatis ke format PDF langsung
-                      dari perangkat iOS untuk keperluan audit eksternal.
+                      Automated ESG report export feature to PDF format directly
+                      from iOS devices for external audit purposes.
                     </li>
                   </ul>
                 </div>
@@ -693,7 +686,7 @@
                   aria-expanded="false"
                   aria-controls="collapseNirwana3"
                 >
-                  Log Bug Fixes & Optimasi
+                  Bug Fixes & Optimization Log
                 </button>
               </h2>
               <div
@@ -704,24 +697,24 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memperbaiki masalah <em>layout break</em> (UI terpotong)
-                      pada layar kecil seperti iPhone SE ketika menampilkan
-                      lebih dari 5 parameter limbah sekaligus.
+                      Fixed a <em>layout break</em> issue (truncated UI) on
+                      small screens like iPhone SE when displaying more than 5
+                      waste parameters simultaneously.
                     </li>
                     <li>
-                      Mengatasi delay pada <code>CoreLocation</code> yang
-                      sebelumnya menyebabkan manifest limbah tercatat dengan
-                      koordinat lokasi tidak akurat.
+                      Resolved delays in <code>CoreLocation</code> that
+                      previously caused waste manifests to be recorded with
+                      inaccurate location coordinates.
                     </li>
                     <li>
-                      Mengurangi ukuran <em>payload</em> API sebesar 40% melalui
-                      implementasi kompresi JSON di sisi klien sebelum proses
-                      pengiriman data.
+                      Reduced API <em>payload</em> size by 40% through the
+                      implementation of JSON compression on the client side
+                      before data transmission.
                     </li>
                     <li>
-                      Menghilangkan lag saat melakukan scrolling pada daftar
-                      riwayat limbah harian yang panjang dengan teknik
-                      <code>LazyVStack</code> yang optimal.
+                      Eliminated lag when scrolling through long daily waste
+                      history lists using an optimized
+                      <code>LazyVStack</code> technique.
                     </li>
                   </ul>
                 </div>
@@ -731,10 +724,10 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 3: KENDALIBBM ==================== -->
+      <!-- ==================== PROJECT 3: KENDALIBBM ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Mei 15, 2025</span>
+          <span class="date-text">May 15, 2025</span>
           <span class="version-badge">v3.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -757,17 +750,17 @@
 
           <ul class="feature-list">
             <li>
-              Mengontrol distribusi pasokan solar secara akurat dari Truk Tangki
-              menuju seluruh armada alat berat (Excavator, Dump Truck,
-              Bulldozer) di site pertambangan.
+              Accurately control diesel supply distribution from Tank Trucks to
+              the entire heavy equipment fleet (Excavators, Dump Trucks,
+              Bulldozers) at the mining site.
             </li>
             <li>
-              Pencatatan meteran digital berbasis QR/Barcode scanner untuk
-              memastikan validitas data pengisian bahan bakar di lapangan.
+              Digital meter recording based on QR/Barcode scanners to ensure the
+              validity of field refueling data.
             </li>
             <li>
-              Fitur deteksi dini penyimpangan konsumsi bahan bakar menggunakan
-              analisis rasio efisiensi mesin (Burn Rate).
+              Early detection feature for fuel consumption anomalies using
+              engine efficiency ratio analysis (Burn Rate).
             </li>
           </ul>
 
@@ -782,7 +775,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKendali1"
                 >
-                  Pengamanan Audit Keuangan
+                  Financial Audit Security
                 </button>
               </h2>
               <div
@@ -793,18 +786,18 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Modul <em>Security Audit</em> pada Command Center
-                      Eksekutif untuk meminimalisir pembengkakan biaya
-                      operasional akibat kebocoran atau kecurangan distribusi.
+                      <em>Security Audit</em> module on the Executive Command
+                      Center to minimize operational cost overruns due to leaks
+                      or distribution fraud.
                     </li>
                     <li>
-                      Pengumpulan otomatis seluruh log pengisian yang masuk
-                      kategori anomali berdasarkan standar rasio Burn Rate
-                      mesin.
+                      Automated collection of all refueling logs categorized as
+                      anomalies based on standard engine Burn Rate ratios.
                     </li>
                     <li>
-                      Sinkronisasi instan data investigasi anomali bahan bakar
-                      langsung kepada tim finansial pusat untuk tindakan lanjut.
+                      Instant synchronization of fuel anomaly investigation data
+                      directly to the central financial team for follow-up
+                      actions.
                     </li>
                   </ul>
                 </div>
@@ -831,21 +824,20 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Membangun komponen
-                      <strong>Circular Capacity Gauge</strong> reaktif
-                      menggunakan <code>Path</code> dan
-                      <code>AnimatableData</code> di SwiftUI yang otomatis
-                      berubah warna saat kapasitas tangki mencapai tingkat
-                      kritis.
+                      Built a reactive
+                      <strong>Circular Capacity Gauge</strong> component using
+                      <code>Path</code> and <code>AnimatableData</code> in
+                      SwiftUI that automatically changes color when tank
+                      capacity reaches critical levels.
                     </li>
                     <li>
-                      Penerapan <em>Rule-Engine</em> di sisi klien yang langsung
-                      memberikan <em>flagging</em> jika input volume BBM
-                      melampaui kapasitas maksimal tangki spesifik alat berat.
+                      Implemented a client-side <em>Rule-Engine</em> that
+                      instantly flags if fuel volume input exceeds the maximum
+                      tank capacity of specific heavy equipment.
                     </li>
                     <li>
-                      Validasi input numerik ketat untuk mencegah kesalahan
-                      pengetikan volume BBM oleh operator pengisian di lapangan.
+                      Strict numeric input validation to prevent fuel volume
+                      typing errors by refueling operators in the field.
                     </li>
                   </ul>
                 </div>
@@ -861,7 +853,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKendali3"
                 >
-                  Log Bug Fixes & Optimasi
+                  Bug Fixes & Optimization Log
                 </button>
               </h2>
               <div
@@ -872,24 +864,23 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memperbaiki masalah akurasi animasi pada
-                      <em>Circular Gauge</em> yang sebelumnya mengalami
-                      <em>stuttering</em> (patah-patah) saat menerima stream
-                      data dengan frekuensi tinggi.
+                      Fixed animation accuracy issues on the
+                      <em>Circular Gauge</em> which previously experienced
+                      <em>stuttering</em> when receiving high-frequency data
+                      streams.
                     </li>
                     <li>
-                      Menyelesaikan error duplikasi UUID pada protokol
-                      <code>Identifiable</code> di list armada yang memicu crash
-                      aplikasi saat proses scrolling cepat.
+                      Resolved duplicate UUID errors in the
+                      <code>Identifiable</code> protocol in the fleet list that
+                      triggered app crashes during fast scrolling.
                     </li>
                     <li>
-                      Melakukan refactor pada alur <em>Publisher</em> di Combine
-                      untuk menghindari eksekusi ulang pemanggilan API yang
-                      tidak perlu.
+                      Refactored the Combine <em>Publisher</em> flow to avoid
+                      unnecessary re-execution of API calls.
                     </li>
                     <li>
-                      Mengoptimalkan manajemen cache gambar profil alat berat
-                      untuk mempercepat waktu muat daftar armada.
+                      Optimized heavy equipment profile image cache management
+                      to speed up fleet list load times.
                     </li>
                   </ul>
                 </div>
@@ -899,10 +890,10 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 4: SENTRISPACE ==================== -->
+      <!-- ==================== PROJECT 4: SENTRISPACE ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Januari 10, 2025</span>
+          <span class="date-text">January 10, 2025</span>
           <span class="version-badge">v2.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -925,16 +916,17 @@
 
           <ul class="feature-list">
             <li>
-              Platform monitoring <strong>Health & Safety</strong> khusus bagi
-              petugas pengawas keselamatan ruang terbatas (Hole Watcher).
+              <strong>Health & Safety</strong> monitoring platform specifically
+              for confined space safety supervisors (Hole Watchers).
             </li>
             <li>
-              Manajemen izin kerja (Permit to Work) digital sebelum personel
-              diperbolehkan memasuki area tangki atau lubang tambang tertutup.
+              Digital Permit to Work management before personnel are allowed to
+              enter tanks or confined mining shafts.
             </li>
             <li>
-              Pencatatan durasi shift kerja personel di dalam ruang terbatas
-              secara presisi untuk mencegah kelelahan dan paparan gas berbahaya.
+              Precise recording of personnel work shift durations inside
+              confined spaces to prevent fatigue and exposure to hazardous
+              gases.
             </li>
           </ul>
 
@@ -949,7 +941,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSentri1"
                 >
-                  Sistem Live Timers & Efisiensi Thread
+                  Live Timers System & Thread Efficiency
                 </button>
               </h2>
               <div
@@ -960,19 +952,17 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memanfaatkan Native <code>Text(_:style: .timer)</code> di
-                      SwiftUI untuk melacak durasi bekerja pekerja di dalam
-                      tangki secara <em>live</em>.
+                      Utilized Native <code>Text(_:style: .timer)</code> in
+                      SwiftUI to track workers' working duration inside tanks
+                      <em>live</em>.
                     </li>
                     <li>
-                      Memastikan durasi berjalan secara persisten pada level
-                      sistem operasi tanpa membebani CPU pada
-                      <em>Main Thread</em>.
+                      Ensured the duration runs persistently at the OS level
+                      without burdening the CPU on the <em>Main Thread</em>.
                     </li>
                     <li>
-                      Menjaga konsumsi daya baterai perangkat tetap rendah
-                      meskipun aplikasi berjalan di latar belakang dalam waktu
-                      lama.
+                      Kept device battery consumption low even when the
+                      application runs in the background for a long time.
                     </li>
                   </ul>
                 </div>
@@ -988,7 +978,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSentri2"
                 >
-                  Sistem Pemicu Alarm Evakuasi
+                  Evacuation Alarm Trigger System
                 </button>
               </h2>
               <div
@@ -999,18 +989,18 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Pencatatan log gas berkala (Oksigen, Hidrogen Sulfida,
-                      LEL) melalui validator lokal di dalam aplikasi.
+                      Periodic gas log recording (Oxygen, Hydrogen Sulfide, LEL)
+                      via local validators within the application.
                     </li>
                     <li>
-                      Pemicuan otomatis <strong>Alarm Evakuasi</strong> dengan
-                      visual warna merah menyala apabila metrik keselamatan
-                      dilanggar.
+                      Automatic triggering of the
+                      <strong>Evacuation Alarm</strong> with bright red visuals
+                      if safety metrics are violated.
                     </li>
                     <li>
-                      Integrasi <em>Haptic Feedback</em> intensif menggunakan
-                      <code>UIImpactFeedbackGenerator</code> untuk memberikan
-                      peringatan taktil darurat kepada pengawas.
+                      Intensive <em>Haptic Feedback</em> integration using
+                      <code>UIImpactFeedbackGenerator</code> to provide
+                      emergency tactile warnings to supervisors.
                     </li>
                   </ul>
                 </div>
@@ -1026,7 +1016,7 @@
                   aria-expanded="false"
                   aria-controls="collapseSentri3"
                 >
-                  Log Bug Fixes & Optimasi
+                  Bug Fixes & Optimization Log
                 </button>
               </h2>
               <div
@@ -1037,26 +1027,24 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memperbaiki bug timer yang ter-reset secara tidak sengaja
-                      ketika aplikasi masuk ke fase
-                      <em>Background State</em> dengan komputasi selisih
-                      <code>Date()</code> saat aplikasi kembali aktif
-                      (<em>resume</em>).
+                      Fixed a timer bug that reset accidentally when the
+                      application entered the <em>Background State</em> by
+                      computing the <code>Date()</code> difference when the
+                      application became active again (<em>resume</em>).
                     </li>
                     <li>
-                      Menyelesaikan masalah kesalahan input desimal pada
-                      keyboard iOS yang memicu <em>false alarm</em> pada
-                      parameter LEL (Lower Explosive Limit).
+                      Resolved a decimal input error issue on the iOS keyboard
+                      that triggered <em>false alarms</em> on the LEL (Lower
+                      Explosive Limit) parameter.
                     </li>
                     <li>
-                      Meringankan beban render UI dengan menerapkan
-                      <code>@ViewBuilder</code> yang lebih modular pada komponen
-                      formulir pemeriksaan.
+                      Lightened the UI rendering load by implementing a more
+                      modular <code>@ViewBuilder</code> on the inspection form
+                      components.
                     </li>
                     <li>
-                      Memperbaiki masalah sinkronisasi notifikasi push lokal
-                      saat perangkat kehilangan koneksi internet di dalam ruang
-                      bawah tanah.
+                      Fixed local push notification synchronization issues when
+                      the device lost internet connection in underground spaces.
                     </li>
                   </ul>
                 </div>
@@ -1066,10 +1054,10 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 5: ESTAFET ==================== -->
+      <!-- ==================== PROJECT 5: ESTAFET ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Agustus 12, 2024</span>
+          <span class="date-text">August 12, 2024</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -1089,18 +1077,16 @@
 
           <ul class="feature-list">
             <li>
-              Aplikasi peralihan operasional antar-shift yang menghubungkan
-              secara mulus antara operator masuk, operator keluar, dan mandor
-              lapangan.
+              Inter-shift operational handover application seamlessly connecting
+              incoming operators, outgoing operators, and field foremen.
             </li>
             <li>
-              Menghapuskan ketergantungan pada buku catatan fisik konvensional
-              untuk meminimalkan risiko kehilangan data serah terima alat.
+              Eliminates reliance on conventional physical logbooks to minimize
+              the risk of losing equipment handover data.
             </li>
             <li>
-              Penyediaan riwayat digital transparan yang dapat diakses kapan
-              saja untuk keperluan investigasi kendala operasional shift
-              sebelumnya.
+              Provision of a transparent digital history accessible anytime for
+              previous shift operational constraint investigation purposes.
             </li>
           </ul>
 
@@ -1115,7 +1101,7 @@
                   aria-expanded="false"
                   aria-controls="collapseEstafet1"
                 >
-                  Workflow Acknowledgment & Keamanan
+                  Acknowledgment Workflow & Security
                 </button>
               </h2>
               <div
@@ -1126,18 +1112,19 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengembangkan sistem <em>Acknowledgment Workflow</em>
-                      (Terima & Mulai Giliran) yang terstruktur ketat.
+                      Developed a strictly structured
+                      <em>Acknowledgment Workflow</em> (Accept & Start Shift)
+                      system.
                     </li>
                     <li>
-                      Sistem memblokir operator masuk untuk menghidupkan alat
-                      berat sebelum mereka selesai melakukan review digital
-                      daftar periksa mesin (Aman / Rusak) yang dilaporkan shift
-                      sebelumnya.
+                      The system blocks incoming operators from starting heavy
+                      equipment before they complete a digital review of the
+                      machine checklist (Safe / Damaged) reported by the
+                      previous shift.
                     </li>
                     <li>
-                      Validasi tanda tangan digital sederhana menggunakan
-                      konfirmasi PIN aman untuk mengesahkan proses serah terima.
+                      Simple digital signature validation using secure PIN
+                      confirmation to authorize the handover process.
                     </li>
                   </ul>
                 </div>
@@ -1153,7 +1140,7 @@
                   aria-expanded="false"
                   aria-controls="collapseEstafet2"
                 >
-                  State Management Enum Tersandi
+                  Encoded Enum State Management
                 </button>
               </h2>
               <div
@@ -1164,18 +1151,16 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Dashboard Mandor dirancang untuk mengumpulkan seluruh log
-                      serah terima secara reaktif dan terpusat.
+                      The Foreman Dashboard is designed to aggregate all
+                      handover logs reactively and centrally.
                     </li>
                     <li>
-                      Memodelkan status operasional menggunakan properti
-                      tersandi Swift Enum
-                      <code>(Normal, Warning, Breakdown)</code>.
+                      Modeled operational status using encoded Swift Enum
+                      properties <code>(Normal, Warning, Breakdown)</code>.
                     </li>
                     <li>
-                      Mengikat state tersebut secara langsung dengan aset warna
-                      UI untuk menjamin konsistensi visual di seluruh komponen
-                      aplikasi.
+                      Bound these states directly with UI color assets to ensure
+                      visual consistency across all application components.
                     </li>
                   </ul>
                 </div>
@@ -1191,7 +1176,7 @@
                   aria-expanded="false"
                   aria-controls="collapseEstafet3"
                 >
-                  Log Bug Fixes & Optimasi
+                  Bug Fixes & Optimization Log
                 </button>
               </h2>
               <div
@@ -1202,26 +1187,25 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memperbaiki crash tak terduga pada
-                      <em>NavigationStack</em> ketika dua user (operator masuk &
-                      keluar) menekan tombol serah terima (<em>submit</em>)
-                      secara bersamaan.
+                      Fixed an unexpected crash on the
+                      <em>NavigationStack</em> when two users (incoming &
+                      outgoing operators) pressed the <em>submit</em> button
+                      simultaneously.
                     </li>
                     <li>
-                      Mengatasi masalah state yang tidak langsung memutakhirkan
-                      tampilan (<em>Not Re-rendering</em>) pada Dashboard Mandor
-                      akibat penyalahgunaan objek <code>@State</code> statis
-                      (diperbaiki dengan migrasi ke <code>@StateObject</code>).
+                      Resolved a state issue that did not immediately update the
+                      view (<em>Not Re-rendering</em>) on the Foreman Dashboard
+                      due to misuse of static <code>@State</code> objects (fixed
+                      by migrating to <code>@StateObject</code>).
                     </li>
                     <li>
-                      Menerapkan fungsi <em>Debounce</em> pada form pencarian
-                      armada untuk meminimalisir pemanggilan server berlebihan
-                      saat pengguna mengetik cepat.
+                      Applied a <em>Debounce</em> function on the fleet search
+                      form to minimize excessive server calls when users type
+                      quickly.
                     </li>
                     <li>
-                      Optimalisasi alur caching data lokal menggunakan CoreData
-                      untuk memastikan akses riwayat shift tetap berjalan tanpa
-                      jeda.
+                      Optimized local data caching flows using CoreData to
+                      ensure shift history access runs seamlessly without delay.
                     </li>
                   </ul>
                 </div>
@@ -1233,7 +1217,7 @@
     </main>
 
     <!-- ======================================================================= -->
-    <!-- SEKAT / PEMBATAS UNTUK KATEGORI BARU -->
+    <!-- DIVIDER FOR NEW CATEGORY -->
     <!-- ======================================================================= -->
     <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
@@ -1251,7 +1235,7 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- HEADER KATEGORI 2: PELAYANAN PUBLIK -->
+    <!-- HEADER CATEGORY 2: PUBLIC SERVICES -->
     <!-- ======================================================================= -->
     <header
       class="portfolio-header"
@@ -1273,14 +1257,14 @@
       </div>
     </header>
 
-    <!-- Main Timeline 2: Pelayanan Publik -->
+    <!-- Main Timeline 2: Public Services -->
     <main class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
-      <!-- ==================== PROYEK 1: BAZNAS JATENG ==================== -->
+      <!-- ==================== PROJECT 1: BAZNAS JATENG ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Maret 10, 2024</span>
+          <span class="date-text">March 10, 2024</span>
           <span class="version-badge">v2.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -1302,24 +1286,23 @@
 
           <ul class="feature-list">
             <li>
-              Platform pelayanan publik terpadu untuk optimalisasi pengumpulan
-              dan pendistribusian Zakat, Infak, dan Sedekah (ZIS) di wilayah
-              Provinsi Jawa Tengah.
+              Integrated public service platform for optimizing the collection
+              and distribution of Zakat, Infaq, and Sadaqah (ZIS) in the Central
+              Java Province.
             </li>
             <li>
-              Sistem manajemen keuangan yang transparan dan akuntabel berbasis
-              teknologi informasi untuk menjamin pelaporan yang
-              <em>real-time</em> kepada muzakki.
+              Transparent and accountable information technology-based financial
+              management system to ensure <em>real-time</em> reporting to
+              muzakki (donors).
             </li>
             <li>
-              Integrasi sistem pendataan mustahik berbasis wilayah guna
-              memastikan penyaluran dana ZIS efektif dalam program pengentasan
-              kemiskinan.
+              Integration of region-based mustahik (beneficiary) data collection
+              systems to ensure effective distribution of ZIS funds in poverty
+              alleviation programs.
             </li>
             <li>
-              Fitur <em>Customer Service</em> responsif (Floating WhatsApp)
-              untuk memberikan pelayanan prima kepada seluruh pemangku
-              kepentingan zakat.
+              Responsive <em>Customer Service</em> feature (Floating WhatsApp)
+              to provide excellent service to all zakat stakeholders.
             </li>
           </ul>
 
@@ -1334,7 +1317,7 @@
                   aria-expanded="false"
                   aria-controls="collapseBaznas1"
                 >
-                  Arsitektur & Tantangan Integrasi Data
+                  Architecture & Data Integration Challenges
                 </button>
               </h2>
               <div
@@ -1345,19 +1328,19 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Menerapkan basis data terpusat untuk mengkoordinasikan
-                      informasi muzakki dan mustahik dari berbagai BAZNAS
-                      Kabupaten/Kota di Jawa Tengah.
+                      Implemented a centralized database to coordinate muzakki
+                      and mustahik information from various Regency/City BAZNAS
+                      in Central Java.
                     </li>
                     <li>
-                      Membangun <em>dashboard</em> eksekutif untuk memantau
-                      indikator sasaran strategis, termasuk pertumbuhan
-                      pengumpulan zakat secara nasional.
+                      Built an executive <em>dashboard</em> to monitor strategic
+                      target indicators, including national zakat collection
+                      growth.
                     </li>
                     <li>
-                      Mengembangkan API terstandarisasi untuk sinkronisasi data
-                      pelaporan operasional dengan lembaga pemerintah daerah
-                      secara aman.
+                      Developed standardized APIs for secure operational
+                      reporting data synchronization with local government
+                      agencies.
                     </li>
                   </ul>
                 </div>
@@ -1373,7 +1356,7 @@
                   aria-expanded="false"
                   aria-controls="collapseBaznas2"
                 >
-                  Implementasi UI/UX & Pelayanan Prima
+                  UI/UX Implementation & Excellent Service
                 </button>
               </h2>
               <div
@@ -1384,21 +1367,19 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mendesain antarmuka <em>user-friendly</em> yang bersih
-                      (clean UI) menggunakan pedoman <em>accessibility</em> agar
-                      mudah digunakan oleh berbagai kalangan usia.
+                      Designed a <em>user-friendly</em> and clean UI using
+                      <em>accessibility</em> guidelines to be easily usable
+                      across all age groups.
                     </li>
                     <li>
-                      Mengintegrasikan
-                      <em>Multi-channel Payment Gateway</em> untuk memfasilitasi
-                      kemudahan berdonasi secara instan dan aman dari perangkat
-                      mobile maupun desktop.
+                      Integrated a <em>Multi-channel Payment Gateway</em> to
+                      facilitate instant and secure donations from mobile and
+                      desktop devices.
                     </li>
                     <li>
-                      Pembuatan komponen
-                      <em>Floating Dock Navigation</em> khusus untuk perangkat
-                      mobile guna mempercepat akses ke menu utama (Beranda,
-                      Profil, Donasi).
+                      Created a <em>Floating Dock Navigation</em> component
+                      specifically for mobile devices to speed up access to main
+                      menus (Home, Profile, Donate).
                     </li>
                   </ul>
                 </div>
@@ -1414,7 +1395,7 @@
                   aria-expanded="false"
                   aria-controls="collapseBaznas3"
                 >
-                  Log Bug Fixes & Optimasi Kinerja
+                  Bug Fixes & Performance Optimization Log
                 </button>
               </h2>
               <div
@@ -1425,23 +1406,24 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengoptimalkan performa server (Load Balancing) untuk
-                      menangani lonjakan <em>traffic</em> (traffic spike) akses
-                      donatur yang tinggi pada bulan Ramadhan.
+                      Optimized server performance (Load Balancing) to handle
+                      high donor access <em>traffic spikes</em> during the month
+                      of Ramadan.
                     </li>
                     <li>
-                      Menyelesaikan masalah <em>asynchronous rendering</em> pada
-                      struktur organisasi (Org Chart) agar tampil rapi di
-                      resolusi layar <em>smartphone</em> yang sempit.
+                      Resolved an <em>asynchronous rendering</em> issue on the
+                      Organization Chart so it displays neatly on narrow
+                      <em>smartphone</em> screen resolutions.
                     </li>
                     <li>
-                      Menerapkan sistem kompresi aset gambar (WebP) dan
-                      <em>lazy loading</em> untuk mempercepat waktu muat halaman
-                      dokumentasi penghargaan BAZNAS.
+                      Implemented an image asset compression system (WebP) and
+                      <em>lazy loading</em> to speed up page load times for
+                      BAZNAS award documentation.
                     </li>
                     <li>
-                      Menambal kerentanan keamanan dengan enkripsi data personal
-                      muzakki untuk mematuhi regulasi perlindungan data privasi.
+                      Patched security vulnerabilities with personal muzakki
+                      data encryption to comply with privacy data protection
+                      regulations.
                     </li>
                   </ul>
                 </div>
@@ -1451,7 +1433,7 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 2: JEMPUTIN ==================== -->
+      <!-- ==================== PROJECT 2: JEMPUTIN ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
           <span class="date-text">November 15, 2023</span>
@@ -1478,23 +1460,22 @@
 
           <ul class="feature-list">
             <li>
-              Platform sirkular ekonomi terpadu untuk mendaur ulang sampah
-              (Plastik, Kardus, Elektronik) dengan layanan penjemputan langsung
-              dari rumah (kurir).
+              Integrated circular economy platform to recycle waste (Plastics,
+              Cardboard, Electronics) with direct home pick-up services
+              (courier).
             </li>
             <li>
-              Dashboard interaktif terpadu yang dilengkapi Kalkulator Emisi CO2
-              dan konversi sampah menjadi poin reward yang dapat dicairkan.
+              Integrated interactive dashboard equipped with a CO2 Emission
+              Calculator and waste conversion into redeemable reward points.
             </li>
             <li>
-              Direktori Bank Sampah berbasis peta (Map) untuk menemukan mitra
-              pengepul terdekat beserta status operasionalnya secara
-              <em>real-time</em>.
+              Map-based Waste Bank directory to find the nearest collector
+              partners along with their <em>real-time</em> operational status.
             </li>
             <li>
-              Modul Edukasi Lingkungan (Blog) komprehensif untuk meningkatkan
-              kesadaran masyarakat mengenai pemilahan sampah organik, daur ulang
-              plastik, dan bahaya E-Waste.
+              Comprehensive Environmental Education Module (Blog) to increase
+              public awareness regarding organic waste sorting, plastic
+              recycling, and the dangers of E-Waste.
             </li>
           </ul>
 
@@ -1509,7 +1490,7 @@
                   aria-expanded="false"
                   aria-controls="collapseJemputin1"
                 >
-                  UI/UX, Gamifikasi & Visualisasi Data
+                  UI/UX, Gamification & Data Visualization
                 </button>
               </h2>
               <div
@@ -1520,21 +1501,20 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mendesain antarmuka modern dengan pendekatan
-                      <em>Mesh Gradient</em> dan
-                      <em>Bento Grid Layout</em> untuk pengalaman pengguna yang
-                      sangat intuitif.
+                      Designed a modern interface with a
+                      <em>Mesh Gradient</em> approach and
+                      <em>Bento Grid Layout</em> for a highly intuitive user
+                      experience.
                     </li>
                     <li>
-                      Mengimplementasikan sistem pencairan poin dinamis yang
-                      terintegrasi penuh dengan simulator
-                      <em>QRIS Generator</em>, E-Wallet (GoPay, OVO, DANA), dan
-                      Transfer Bank.
+                      Implemented a dynamic point redemption system fully
+                      integrated with a <em>QRIS Generator</em> simulator,
+                      E-Wallets (GoPay, OVO, DANA), and Bank Transfers.
                     </li>
                     <li>
-                      Pembuatan visualisasi data dinamis menggunakan pustaka
-                      <strong>Chart.js</strong> untuk menampilkan performa dan
-                      tren volume setoran sampah harian pengguna.
+                      Created dynamic data visualizations using the
+                      <strong>Chart.js</strong> library to display user
+                      performance and daily waste deposit volume trends.
                     </li>
                   </ul>
                 </div>
@@ -1550,7 +1530,7 @@
                   aria-expanded="false"
                   aria-controls="collapseJemputin2"
                 >
-                  Integrasi Peta Interaktif & Manajemen Sesi
+                  Interactive Map Integration & Session Management
                 </button>
               </h2>
               <div
@@ -1561,20 +1541,20 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Pemanfaatan <strong>Leaflet.js</strong> untuk merender
-                      peta direktori bank sampah secara presisi, lengkap dengan
-                      <em>Custom Popup Marker</em> informatif.
+                      Utilized <strong>Leaflet.js</strong> to render waste bank
+                      directory maps precisely, complete with informative
+                      <em>Custom Popup Markers</em>.
                     </li>
                     <li>
-                      Membangun fitur pencarian lokasi mitra pengepul terdekat
-                      secara instan menggunakan algoritma
-                      <em>real-time string filtering</em>.
+                      Built an instant nearest collector partner location search
+                      feature using a
+                      <em>real-time string filtering</em> algorithm.
                     </li>
                     <li>
-                      Mengelola <em>state</em> aplikasi, autentikasi sesi login
-                      pengguna, dan seluruh riwayat transaksi
-                      (setoran/pencairan) secara lokal memanfaatkan arsitektur
-                      <code>LocalStorage</code> berbasis JSON.
+                      Managed application <em>state</em>, user login session
+                      authentication, and all transaction history
+                      (deposits/withdrawals) locally utilizing JSON-based
+                      <code>LocalStorage</code> architecture.
                     </li>
                   </ul>
                 </div>
@@ -1590,7 +1570,7 @@
                   aria-expanded="false"
                   aria-controls="collapseJemputin3"
                 >
-                  Log Bug Fixes & Optimasi Front-End
+                  Bug Fixes & Front-End Optimization Log
                 </button>
               </h2>
               <div
@@ -1601,27 +1581,28 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengoptimalkan proses <em>rendering</em> gambar bukti
-                      timbangan (konversi <em>File-to-Base64</em>) guna mencegah
-                      isu <em>memory leak</em> pada browser peramban perangkat
-                      <em>mobile</em>.
+                      Optimized the scale photo proof <em>rendering</em> process
+                      (File-to-Base64 conversion) to prevent
+                      <em>memory leak</em> issues on <em>mobile</em> device
+                      browsers.
                     </li>
                     <li>
-                      Memperbaiki <em>edge-case</em> pada form pencairan poin di
-                      mana pergantian opsi penarikan (QRIS/E-Wallet) gagal
-                      me-<em>reset placeholder</em> input nomor tujuan dengan
-                      benar.
+                      Fixed an <em>edge-case</em> in the point withdrawal form
+                      where switching withdrawal options (QRIS/E-Wallet) failed
+                      to correctly reset the destination number input
+                      <em>placeholder</em>.
                     </li>
                     <li>
-                      Menyesuaikan responsivitas tabel riwayat dan navigasi (<em
-                        >Mobile Menu</em
-                      >) agar tidak saling menumpuk (<em>layout overlap</em>)
-                      saat diakses melalui perangkat beresolusi layar kecil.
+                      Adjusted the responsiveness of the history table and
+                      navigation (<em>Mobile Menu</em>) so they don't overlap
+                      (<em>layout overlap</em>) when accessed via small screen
+                      resolution devices.
                     </li>
                     <li>
-                      Mengamankan data dari risiko <em>data loss</em> pada form
-                      formulir penjemputan dengan cara menarik data profil
-                      pengguna secara otomatis (<em>auto-fill session</em>).
+                      Secured data from <em>data loss</em> risks on the pick-up
+                      form by automatically pulling user profile data (<em
+                        >auto-fill session</em
+                      >).
                     </li>
                   </ul>
                 </div>
@@ -1633,7 +1614,7 @@
     </main>
 
     <!-- ======================================================================= -->
-    <!-- SEKAT / PEMBATAS UNTUK KATEGORI BARU 3 (E-COMMERCE) -->
+    <!-- DIVIDER FOR NEW CATEGORY 3 (E-COMMERCE) -->
     <!-- ======================================================================= -->
     <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
@@ -1651,7 +1632,7 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- HEADER KATEGORI 3: E-COMMERCE -->
+    <!-- HEADER CATEGORY 3: E-COMMERCE -->
     <!-- ======================================================================= -->
     <header
       class="portfolio-header"
@@ -1677,7 +1658,7 @@
     <main class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
-      <!-- ==================== PROYEK 1: APPLENATION ==================== -->
+      <!-- ==================== PROJECT 1: APPLENATION ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
           <span class="date-text">April 26, 2026</span>
@@ -1702,18 +1683,19 @@
 
           <ul class="feature-list">
             <li>
-              Aplikasi <em>e-commerce</em> eksklusif berfokus pada penjualan
-              produk ekosistem Apple (iPhone baru & bekas) dengan UI/UX bertema
-              <em>Glassmorphism</em>.
+              Exclusive <em>e-commerce</em> application focused on selling Apple
+              ecosystem products (new & used iPhones) with a
+              <em>Glassmorphism</em> themed UI/UX.
             </li>
             <li>
-              Katalog interaktif yang dilengkapi fitur filter dinamis (pencarian
-              teks dan kategori kondisi) serta animasi perubahan harga
-              <em>real-time</em> saat memilih kapasitas memori.
+              Interactive catalog equipped with dynamic filter features (text
+              search and condition categories) as well as
+              <em>real-time</em> price change animations when selecting memory
+              capacity.
             </li>
             <li>
-              Sistem <em>Checkout</em> terintegrasi yang menghitung subtotal
-              keranjang dan biaya opsi pengiriman logistik secara instan.
+              Integrated <em>Checkout</em> system that calculates the cart
+              subtotal and logistic shipping options costs instantly.
             </li>
           </ul>
 
@@ -1728,7 +1710,7 @@
                   aria-expanded="false"
                   aria-controls="collapseAppleNation1"
                 >
-                  Manajemen State & Data Persisten
+                  State Management & Persistent Data
                 </button>
               </h2>
               <div
@@ -1739,25 +1721,24 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Menginjeksi <code>EnvironmentObject</code> secara global
-                      pada <code>WindowGroup</code> (CartManager, OrderManager,
-                      WishlistManager) agar state sinkron di seluruh tab
-                      navigasi (Katalog, Favorit, Keranjang).
+                      Injected <code>EnvironmentObject</code> globally on
+                      <code>WindowGroup</code> (CartManager, OrderManager,
+                      WishlistManager) to synchronize state across all
+                      navigation tabs (Catalog, Favorites, Cart).
                     </li>
                     <li>
-                      Membangun persistensi data lokal otomatis memanfaatkan
-                      <code>UserDefaults</code> dengan melakukan
-                      <em>encode/decode</em> objek model ke format JSON untuk
-                      menjaga riwayat transaksi tetap ada meskipun aplikasi
-                      ditutup.
+                      Built automatic local data persistence utilizing
+                      <code>UserDefaults</code> by
+                      <em>encoding/decoding</em> model objects to JSON format to
+                      keep transaction history even if the app is closed.
                     </li>
                     <li>
-                      Penerapan properti <em>Observer</em> (<code
+                      Applied <em>Observer</em> properties (<code
                         >@Published</code
                       >
-                      & <code>didSet</code>) untuk memicu fungsi penyimpanan
-                      lokal (<em>saveItems</em>) secara instan setiap kali
-                      terjadi perubahan isi keranjang.
+                      & <code>didSet</code>) to trigger local storage functions
+                      (<em>saveItems</em>) instantly whenever there are changes
+                      to the cart contents.
                     </li>
                   </ul>
                 </div>
@@ -1773,7 +1754,7 @@
                   aria-expanded="false"
                   aria-controls="collapseAppleNation2"
                 >
-                  Dinamika UI & Interaksi Pengguna
+                  UI Dynamics & User Interaction
                 </button>
               </h2>
               <div
@@ -1784,22 +1765,21 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Implementasi sistem harga dinamis (<em>Dynamic Pricing</em
-                      >) yang mengalkulasi harga dasar ditambah marjin spesifik
-                      setiap varian kapasitas (dari 64GB hingga 1TB).
+                      Implemented a <em>Dynamic Pricing</em> system that
+                      calculates the base price plus a specific margin for each
+                      capacity variant (from 64GB to 1TB).
                     </li>
                     <li>
-                      Mendesain halaman detail produk yang reaktif: bayangan dan
-                      warna gambar iPhone (<em>hero image</em>) otomatis
-                      bertransisi menggunakan blok
-                      <code>.animation(.easeInOut)</code> saat pengguna memilih
-                      varian warna (<em>Color Picker</em>).
+                      Designed a reactive product detail page: shadows and
+                      iPhone image colors (<em>hero image</em>) transition
+                      automatically using the
+                      <code>.animation(.easeInOut)</code> block when users
+                      select color variants (<em>Color Picker</em>).
                     </li>
                     <li>
-                      Pembuatan <em>Custom TabView</em> dengan lencana (<em
-                        >badge indicator</em
-                      >) responsif yang selalu menampilkan jumlah total barang
-                      di dalam keranjang belanja pengguna.
+                      Created a <em>Custom TabView</em> with a responsive
+                      <em>badge indicator</em> that always displays the total
+                      number of items in the user's shopping cart.
                     </li>
                   </ul>
                 </div>
@@ -1815,7 +1795,7 @@
                   aria-expanded="false"
                   aria-controls="collapseAppleNation3"
                 >
-                  Log Bug Fixes & Optimasi
+                  Bug Fixes & Optimization Log
                 </button>
               </h2>
               <div
@@ -1826,23 +1806,22 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memperbaiki <em>compile error</em> terkait interpolasi
-                      harga total keranjang dengan membuang simbol mata uang
-                      tidak terdefinisi (<code>$</code>) dari blok
-                      <em>reducer</em> kalkulasi harga.
+                      Fixed a <em>compile error</em> related to cart total price
+                      interpolation by removing the undefined currency symbol
+                      (<code>$</code>) from the price calculation
+                      <em>reducer</em> block.
                     </li>
                     <li>
-                      Menyelesaikan masalah dependensi modul Combine dengan
-                      secara eksplisit melakukan
-                      <code>import Combine</code> pada komponen yang
-                      mengimplementasikan <em>Publishers</em> secara masif
-                      (WishlistView & OrdersView).
+                      Resolved Combine module dependency issues by explicitly
+                      doing an <code>import Combine</code> on components that
+                      massively implement <em>Publishers</em> (WishlistView &
+                      OrdersView).
                     </li>
                     <li>
-                      Mengamankan alur navigasi <em>checkout</em>:
-                      menyembunyikan tombol <em>back</em> bawaan pada
-                      <code>SuccessView</code> untuk mencegah pelanggan
-                      melakukan duplikasi pengiriman data pesanan yang sama.
+                      Secured the <em>checkout</em> navigation flow: hiding the
+                      native <em>back</em> button on <code>SuccessView</code> to
+                      prevent customers from duplicating the same order data
+                      submission.
                     </li>
                   </ul>
                 </div>
@@ -1854,7 +1833,7 @@
     </main>
 
     <!-- ======================================================================= -->
-    <!-- SEKAT KATEGORI 4 (WEB APPLICATION) -->
+    <!-- DIVIDER CATEGORY 4 (WEB APPLICATION) -->
     <!-- ======================================================================= -->
     <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
@@ -1872,7 +1851,7 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- HEADER KATEGORI 4: WEB APPLICATION -->
+    <!-- HEADER CATEGORY 4: WEB APPLICATION -->
     <!-- ======================================================================= -->
     <header
       class="portfolio-header"
@@ -1898,10 +1877,10 @@
     <main class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
-      <!-- ==================== PROYEK 1: UNIVERSAL CONVERTER ==================== -->
+      <!-- ==================== PROJECT 1: UNIVERSAL CONVERTER ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Juli 2026</span>
+          <span class="date-text">July 2026</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -1925,19 +1904,19 @@
 
           <ul class="feature-list">
             <li>
-              Aplikasi utilitas web untuk mengonversi berbagai media digital
-              (Gambar, Video, Audio, Dokumen) dengan antarmuka
-              <em>Drag-and-Drop Dropzone</em> interaktif.
+              Web utility application to convert various digital media (Images,
+              Videos, Audio, Documents) with an interactive
+              <em>Drag-and-Drop Dropzone</em> interface.
             </li>
             <li>
-              Mesin konversi gambar instan berbasis
-              <em>Client-side Canvas API</em> yang memungkinkan pengguna merubah
-              format gambar secara lokal tanpa upload ke server.
+              Instant image conversion engine based on
+              <em>Client-side Canvas API</em> allowing users to change image
+              formats locally without server uploads.
             </li>
             <li>
-              Pengelompokan (grouping) otomatis berdasarkan kategori tipe media
-              dengan <em>auto-download batch generation</em> setelah konversi
-              selesai.
+              Automatic grouping based on media type categories with
+              <em>auto-download batch generation</em> after conversion is
+              complete.
             </li>
           </ul>
 
@@ -1952,7 +1931,7 @@
                   aria-expanded="false"
                   aria-controls="collapseUniversal1"
                 >
-                  Arsitektur Client-Side & Hybrid Rendering
+                  Client-Side Architecture & Hybrid Rendering
                 </button>
               </h2>
               <div
@@ -1963,16 +1942,15 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Menggabungkan arsitektur SSR
-                      <strong>Next.js App Router</strong> untuk
-                      <em>initial load</em> antarmuka yang cepat dengan
-                      pemrosesan mutlak di sisi klien.
+                      Combined **Next.js App Router** SSR architecture for fast
+                      <em>initial load</em> interfaces with absolute processing
+                      on the client side.
                     </li>
                     <li>
-                      Proses berat komputasi manipulasi piksel (Canvas)
-                      ditangani sepenuhnya di <em>Client-side</em> untuk
-                      meminimalisir beban server dan menjamin privasi pengguna
-                      100% (Zero-Server Upload).
+                      Heavy pixel manipulation (Canvas) computing processes are
+                      handled entirely on the <em>Client-side</em> to minimize
+                      server load and ensure 100% user privacy (Zero-Server
+                      Upload).
                     </li>
                   </ul>
                 </div>
@@ -1988,7 +1966,7 @@
                   aria-expanded="false"
                   aria-controls="collapseUniversal2"
                 >
-                  Implementasi Dropzone & Eksekusi Masal
+                  Dropzone Implementation & Batch Execution
                 </button>
               </h2>
               <div
@@ -1999,17 +1977,15 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Menerapkan area unggah reaktif menggunakan
-                      <code>react-dropzone</code> yang diperkaya animasi
-                      transisi <em>hover</em> dan <em>active</em> via
-                      <strong>Framer Motion</strong>.
+                      Implemented a reactive upload area using
+                      <code>react-dropzone</code> enriched with
+                      <em>hover</em> and <em>active</em> transition animations
+                      via <strong>Framer Motion</strong>.
                     </li>
                     <li>
-                      Membangun sistem antrean konversi masal (<em
-                        >Batch Processing</em
-                      >) asinkron yang secara berurutan mengeksekusi file dan
-                      memicu proses <em>auto-download</em> pada peramban
-                      pengguna.
+                      Built an asynchronous <em>Batch Processing</em> conversion
+                      queue system that sequentially executes files and triggers
+                      the <em>auto-download</em> process on the user's browser.
                     </li>
                   </ul>
                 </div>
@@ -2025,7 +2001,7 @@
                   aria-expanded="false"
                   aria-controls="collapseUniversal3"
                 >
-                  Log Bug Fixes & Pelepasan Objek URL
+                  Bug Fixes & URL Object Revocation Log
                 </button>
               </h2>
               <div
@@ -2036,16 +2012,15 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Memperbaiki potensi kebocoran memori (<em>Memory Leak</em
-                      >) saat memproses puluhan <em>blob</em> sekaligus dengan
-                      menyisipkan rutinitas eksekusi
-                      <code>URL.revokeObjectURL()</code> yang terstruktur.
+                      Fixed potential <em>Memory Leaks</em> when processing
+                      dozens of <em>blobs</em> at once by inserting a structured
+                      <code>URL.revokeObjectURL()</code> execution routine.
                     </li>
                     <li>
-                      Penerapan <code>Promise.all()</code> terkontrol untuk
-                      mencegah antarmuka peramban membeku (<em>UI Blocking</em>)
-                      ketika merender barisan antrean puluhan file secara
-                      berbarengan.
+                      Applied controlled <code>Promise.all()</code> to prevent
+                      the browser interface from freezing (<em>UI Blocking</em>)
+                      when rendering a queue line of dozens of files
+                      simultaneously.
                     </li>
                   </ul>
                 </div>
@@ -2055,10 +2030,10 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 2: LEGACY CONVERTER ==================== -->
+      <!-- ==================== PROJECT 2: LEGACY CONVERTER ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Juni 2026</span>
+          <span class="date-text">June 2026</span>
           <span class="version-badge">v1.2</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -2079,18 +2054,17 @@
 
           <ul class="feature-list">
             <li>
-              Aplikasi spesifik yang memecahkan masalah backward-compatibility
-              pada ekosistem Adobe Creative Cloud (Premiere Pro, After Effects,
+              Specific application solving backward-compatibility issues in the
+              Adobe Creative Cloud ecosystem (Premiere Pro, After Effects,
               Photoshop).
             </li>
             <li>
-              Memungkinkan pengguna untuk melakukan <em>downgrade</em> file
-              proyek (.prproj) buatan CC 2025 agar dapat dibuka di versi lawas
-              hingga CS6 secara aman.
+              Allows users to <em>downgrade</em> project files (.prproj) made in
+              CC 2025 so they can be opened safely in legacy versions up to CS6.
             </li>
             <li>
-              Antarmuka berdesain brutalism/minimalis dengan indikator status
-              dinamis dan animasi teks <em>typewriter</em>.
+              Brutalism/minimalist designed interface with dynamic status
+              indicators and <em>typewriter</em> text animations.
             </li>
           </ul>
 
@@ -2105,7 +2079,7 @@
                   aria-expanded="false"
                   aria-controls="collapseLegacy1"
                 >
-                  Manipulasi Binary XML & Dekompresi zlib
+                  Binary XML Manipulation & zlib Decompression
                 </button>
               </h2>
               <div
@@ -2116,16 +2090,16 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Membedah struktur GZIP tersembunyi pada file
-                      <code>.prproj</code> menggunakan modul
-                      <code>zlib</code> bawaan Node.js tanpa merusak susunan
-                      hierarki lapisan (<em>layer</em>).
+                      Dissected the hidden GZIP structure in
+                      <code>.prproj</code> files using the built-in Node.js
+                      <code>zlib</code> module without destroying the layer
+                      hierarchy.
                     </li>
                     <li>
-                      Melakukan injeksi <em>String Regex</em> secara native pada
-                      <em>buffer thread</em> untuk memodifikasi atribut
-                      <code>Version</code> pada <em>root project</em> secara
-                      akurat dan presisi.
+                      Injected Native <em>String Regex</em> on the
+                      <em>buffer thread</em> to modify the
+                      <code>Version</code> attribute on the
+                      <em>root project</em> accurately and precisely.
                     </li>
                   </ul>
                 </div>
@@ -2141,7 +2115,7 @@
                   aria-expanded="false"
                   aria-controls="collapseLegacy2"
                 >
-                  Estetika Brutalism & State Mikrodinamis
+                  Brutalism Aesthetics & Micro-dynamic State
                 </button>
               </h2>
               <div
@@ -2152,16 +2126,16 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengganti <em>loading spinner</em> konvensional dengan
-                      teks indikator tahap mikrodinamis (seperti:
-                      <em>Downgrading Structure...</em>) untuk memberikan
-                      kejelasan proses yang lebih transparan.
+                      Replaced conventional <em>loading spinners</em> with
+                      micro-dynamic stage indicator texts (e.g.,
+                      <em>Downgrading Structure...</em>) to provide clearer
+                      process transparency.
                     </li>
                     <li>
-                      Membuat komponen <em>custom dropdown selector</em> dengan
-                      kombinasi font Geist Sans dan efek animasi
-                      <em>Typewriter</em>, memperkuat identitas visual bergaya
-                      minimalis-brutalism.
+                      Created a <em>custom dropdown selector</em> component
+                      combining the Geist Sans font and
+                      <em>Typewriter</em> animation effects, reinforcing the
+                      minimalist-brutalism visual identity.
                     </li>
                   </ul>
                 </div>
@@ -2177,7 +2151,7 @@
                   aria-expanded="false"
                   aria-controls="collapseLegacy3"
                 >
-                  Keamanan Server Actions & Bypass Timeout
+                  Server Actions Security & Timeout Bypass
                 </button>
               </h2>
               <div
@@ -2188,16 +2162,16 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengisolasi logika dekripsi murni pada
-                      <strong>Next.js Server Actions</strong> guna mencegah
-                      klien menginspeksi atau menyisipkan
-                      <em>malicious payload</em> pada data XML mentah.
+                      Isolated pure decryption logic in
+                      <strong>Next.js Server Actions</strong> to prevent clients
+                      from inspecting or injecting
+                      <em>malicious payloads</em> into raw XML data.
                     </li>
                     <li>
-                      Memanfaatkan Route Handlers untuk mengonfigurasi
-                      <em>buffer response stream</em>, menghindari
-                      <em>timeout</em> Vercel saat mengembalikan hasil konversi
-                      proyek berukuran raksasa.
+                      Utilized Route Handlers to configure the
+                      <em>buffer response stream</em>, avoiding Vercel
+                      <em>timeouts</em> when returning gigantic converted
+                      project files.
                     </li>
                   </ul>
                 </div>
@@ -2207,7 +2181,7 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 3: KOMPRESINDONG ==================== -->
+      <!-- ==================== PROJECT 3: KOMPRESINDONG ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
           <span class="date-text">April 2026</span>
@@ -2233,17 +2207,17 @@
 
           <ul class="feature-list">
             <li>
-              Platform kompresi aset gambar massal (Bulk Compression) super
-              cepat yang mengeksekusi konversi mutlak di browser pengguna tanpa
+              Super fast bulk image asset compression platform that executes
+              conversion entirely in the user's browser without a
               <em>backend</em>.
             </li>
             <li>
-              Algoritma optimasi otomatis yang mereduksi bobot file (JPG, PNG,
-              WEBP) namun tetap mempertahankan limit resolusi batas maksimal.
+              Automated optimization algorithms that reduce file size (JPG, PNG,
+              WEBP) while maintaining maximum limit resolutions.
             </li>
             <li>
-              Dashboard hasil kompresi informatif dengan kalkulasi rasio
-              persentase penghematan ukuran file secara instan.
+              Informative compression results dashboard with instant file size
+              savings percentage ratio calculations.
             </li>
           </ul>
 
@@ -2258,7 +2232,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKompresin1"
                 >
-                  Integrasi Web Workers & Manajemen Blob Lokal
+                  Web Workers Integration & Local Blob Management
                 </button>
               </h2>
               <div
@@ -2269,16 +2243,17 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mendelegasikan beban komputasi rasio kompresi gambar ke
-                      <strong>Web Workers</strong> yang berjalan di latar
-                      belakang, membebaskan <em>Main UI Thread</em> dari risiko
-                      <em>freeze</em>.
+                      Delegated image compression ratio computing loads to
+                      <strong>Web Workers</strong> running in the background,
+                      freeing the <em>Main UI Thread</em> from
+                      <em>freeze</em> risks.
                     </li>
                     <li>
-                      Menjaga kerahasiaan (<em>privacy-first</em>) dengan
-                      mengalihkan <em>pipeline</em> file sepenuhnya ke
-                      <em>Local Memory</em> peramban pengguna; struktur
-                      <em>state array</em> menyimpan blob tanpa sentuhan server.
+                      Maintained confidentiality (<em>privacy-first</em>) by
+                      shifting the file <em>pipeline</em> entirely to the user's
+                      browser <em>Local Memory</em>; the
+                      <em>state array</em> structure stores blobs without
+                      touching the server.
                     </li>
                   </ul>
                 </div>
@@ -2294,7 +2269,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKompresin2"
                 >
-                  Kalkulasi Penghematan Real-time & AnimatePresence
+                  Real-time Savings Calculation & AnimatePresence
                 </button>
               </h2>
               <div
@@ -2305,15 +2280,14 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Membangun eksekutor matematis dinamis yang secara instan
-                      merender lencana persentase "Penghematan Storage" sesaat
-                      setelah proses <em>scaling</em> selesai.
+                      Built a dynamic mathematical executor that instantly
+                      renders a "Storage Savings" percentage badge right after
+                      the <em>scaling</em> process is complete.
                     </li>
                     <li>
-                      Mengaplikasikan <code>AnimatePresence</code> guna meredam
-                      efek <em>layout jumping</em>, sehingga pembuangan atau
-                      penambahan item ke dalam antrean (<em>queue</em>) terasa
-                      mulus dan mengalir.
+                      Applied <code>AnimatePresence</code> to dampen the
+                      <em>layout jumping</em> effect, so removing or adding
+                      items to the <em>queue</em> feels smooth and fluid.
                     </li>
                   </ul>
                 </div>
@@ -2329,7 +2303,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKompresin3"
                 >
-                  Log Bug Fixes & Filter Ekstensi Ketat
+                  Bug Fixes & Strict Extension Filter Log
                 </button>
               </h2>
               <div
@@ -2340,16 +2314,16 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mencegah <em>rendering</em> latar transparan yang
-                      menghitam pada hasil kompresi <code>WEBP</code> dengan
-                      menyetel <em>strict boolean mask options</em> pada fungsi
-                      <em>Canvas Export</em>.
+                      Prevented transparent backgrounds from rendering black on
+                      <code>WEBP</code> compression results by setting
+                      <em>strict boolean mask options</em> in the
+                      <em>Canvas Export</em> function.
                     </li>
                     <li>
-                      Menambal celah <em>overhead loop</em> serta unggahan
-                      duplikat identik secara bersamaan dengan memvalidasi
-                      pembacaan <em>checksum</em> dan melakukan filter
-                      <em>MIME Type</em> ketat (<code>image/*</code>).
+                      Patched <em>overhead loop</em> loopholes and simultaneous
+                      identical duplicate uploads by validating
+                      <em>checksum</em> reads and applying strict
+                      <em>MIME Type</em> filters (<code>image/*</code>).
                     </li>
                   </ul>
                 </div>
@@ -2359,10 +2333,10 @@
         </div>
       </div>
 
-      <!-- ==================== PROYEK 4: KEEPTIK ==================== -->
+      <!-- ==================== PROJECT 4: KEEPTIK ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">Februari 2026</span>
+          <span class="date-text">February 2026</span>
           <span class="version-badge">v2.1</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -2385,18 +2359,18 @@
 
           <ul class="feature-list">
             <li>
-              Aplikasi utilitas ringan untuk mengekstrak video bersih (tanpa
-              watermark) dan lagu orisinal (MP3) dari platform TikTok.
+              Lightweight utility application to extract clean videos (no
+              watermark) and original songs (MP3) from the TikTok platform.
             </li>
             <li>
-              Mendukung <em>parsing</em> data khusus konten berbasis
-              <em>Carousel/Slideshow</em> dengan rendering grid otomatis untuk
-              diunduh per bagian.
+              Supports data <em>parsing</em> specifically for
+              <em>Carousel/Slideshow</em> based content with automatic grid
+              rendering for per-part downloading.
             </li>
             <li>
-              UI Minimalis responsif menggunakan indikator
-              <em>loading state</em> mikrodinamis guna menjaga kejelasan alur
-              interaksi pengguna.
+              Responsive Minimalist UI using micro-dynamic
+              <em>loading state</em> indicators to maintain clarity in the user
+              interaction flow.
             </li>
           </ul>
 
@@ -2411,7 +2385,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKeeptik1"
                 >
-                  Arsitektur Proxy & Isolasi Endpoint REST API
+                  Proxy Architecture & REST API Endpoint Isolation
                 </button>
               </h2>
               <div
@@ -2422,15 +2396,14 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Menyembunyikan <em>URL target</em> dan kredensial akses di
-                      balik tabir <strong>Server Actions</strong> demi
-                      menghindari inspeksi dari pihak <em>client-side</em>.
+                      Hid the <em>target URL</em> and access credentials behind
+                      the veil of <strong>Server Actions</strong> to avoid
+                      inspection from the <em>client-side</em>.
                     </li>
                     <li>
-                      Membobol restriksi batas <em>CORS</em> (Cross-Origin
-                      Resource Sharing) video lintas origin dengan merutekan
-                      aliran memori menuju <em>Proxy Route Handler</em> internal
-                      server.
+                      Bypassed <em>CORS</em> (Cross-Origin Resource Sharing)
+                      boundaries for cross-origin videos by routing the memory
+                      stream to an internal server <em>Proxy Route Handler</em>.
                     </li>
                   </ul>
                 </div>
@@ -2446,7 +2419,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKeeptik2"
                 >
-                  Engine Grid Renderer untuk TikTok Slideshow
+                  Grid Renderer Engine for TikTok Slideshows
                 </button>
               </h2>
               <div
@@ -2457,18 +2430,16 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengimplementasikan deteksi bentuk JSON dinamis yang
-                      otomatis mengubah arsitektur layout tunggal menjadi
-                      matriks <em>Image Carousel</em> apabila memuat konten
-                      <em>photo-swipe</em>.
+                      Implemented dynamic JSON shape detection that
+                      automatically transforms a single layout architecture into
+                      an <em>Image Carousel</em> matrix when loading
+                      <em>photo-swipe</em> content.
                     </li>
                     <li>
-                      Menciptakan komponen interaksi terpisah di mana tombol
-                      <em>Ekstrak Musik Original (MP3)</em> akan di-<em
-                        >mount</em
-                      >
-                      dengan sendirinya apabila mendeteksi ketersediaan
-                      <em>metadata audio</em>.
+                      Created a separate interaction component where the
+                      <em>Extract Original Music (MP3)</em> button will
+                      <em>mount</em> itself if it detects the availability of
+                      <em>audio metadata</em>.
                     </li>
                   </ul>
                 </div>
@@ -2484,7 +2455,7 @@
                   aria-expanded="false"
                   aria-controls="collapseKeeptik3"
                 >
-                  Log Bug Fixes & Resolusi Encoding URL
+                  Bug Fixes & URL Encoding Resolution Log
                 </button>
               </h2>
               <div
@@ -2495,16 +2466,16 @@
                 <div class="accordion-body">
                   <ul class="feature-list mb-0">
                     <li>
-                      Mengurai kendala <em>False Positive Fetching</em> (animasi
-                      berhasil tanpa <em>output</em>) lewat implementasi logika
-                      kondisional berlapis saat memeriksa status
-                      <em>code</em> dari respons API.
+                      Resolved <em>False Positive Fetching</em> issues
+                      (successful animation without <em>output</em>) through the
+                      implementation of nested conditional logic when checking
+                      the <em>status code</em> from the API response.
                     </li>
                     <li>
-                      Memperbaiki kegagalan <em>parsing</em> URL yang memuat
-                      parameter karakter khusus atau emotikon panjang melalui
-                      implementasi protokol eksekusi perlindungan
-                      <code>encodeURIComponent()</code>.
+                      Fixed URL <em>parsing</em> failures containing special
+                      characters or long emoticon parameters through the
+                      implementation of the
+                      <code>encodeURIComponent()</code> execution protocol.
                     </li>
                   </ul>
                 </div>
@@ -2572,7 +2543,7 @@
       // ========================================= //
       const backToTopBtn = document.getElementById("backToTopBtn");
 
-      // Menampilkan atau menyembunyikan tombol saat di-scroll
+      // Show or hide the button when scrolling
       window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
           backToTopBtn.classList.add("show");
@@ -2581,7 +2552,7 @@
         }
       });
 
-      // Kembali ke atas dengan animasi yang halus saat ditekan
+      // Scroll back to top with smooth animation when clicked
       backToTopBtn.addEventListener("click", () => {
         window.scrollTo({
           top: 0,
