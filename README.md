@@ -1,87 +1,64 @@
-# ./Takhiyuddin.com - Developer Portfolio
+# ./Takhiyuddin.com - Professional Portfolio Website 🚀
 
-Selamat datang di repositori portofolio **Takhiyuddin.com**. Dokumen ini merangkum berbagai proyek pengembangan perangkat lunak yang telah dibangun, mencakup aplikasi *mobile* dan *web* di berbagai sektor industri mulai dari Pertambangan & Migas, Pelayanan Publik, hingga E-Commerce.
+Selamat datang di repositori kode sumber untuk website portofolio interaktif **Takhiyuddin.com**. Website ini dirancang sebagai halaman web statis tunggal (Single Page Application) bergaya linimasa (*timeline*) untuk menampilkan berbagai mahakarya pengembangan perangkat lunak (Mobile & Web) di berbagai sektor industri.
 
----
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap_5-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-## 🏭 Mining and Oil & Gas
+## 📌 Deskripsi
 
-### TataBumi - Mining Operations ERP (v5.4.2)
-*   **Periode:** 2024 - 2026
-*   **Teknologi:** SwiftUI, Combine (MVVM), Swift Charts, MapKit
-*   **Deskripsi:** Aplikasi *Enterprise Resource Planning* (ERP) komprehensif untuk sektor pertambangan dengan arsitektur *Router-based View* yang modular.
-*   **Fitur Utama:** Monitoring produksi *Pit to Port* *real-time*, manajemen aset alat berat, manajemen multi-user (RBAC), dan integrasi *geotagging* MapKit untuk melacak pergerakan aset.
-*   **Pencapaian Teknis:** Menerapkan MVVM murni, menyelesaikan *memory leak* pada MapKit saat memuat 1000+ anotasi, dan mengoptimalkan *rendering* Swift Charts dari O(n²) ke O(n).
+Website portofolio ini menampilkan perjalanan proyek (*project timeline*) yang terbagi ke dalam empat kategori industri utama. Dibangun dengan fokus pada Tipografi yang bersih, UI/UX yang responsif, serta performa animasi tingkat tinggi menggunakan AOS (Animate On Scroll).
 
-### Nirwana - Environmental Management & ESG Analytics (v4.0)
-*   **Rilis:** Oktober 2025
-*   **Teknologi:** SwiftUI, Charts Data-Viz, CoreLocation
-*   **Deskripsi:** Portal *Dual-Role* untuk memfasilitasi akses lapangan dan *Dashboard Executive* terkait pengelolaan lingkungan dan audit ESG.
-*   **Fitur Utama:** Audit lingkungan otomatis (emisi karbon, limbah B3, reklamasi), pelaporan insiden instan, dan pemicu *Hazard Alert* otomatis untuk sampel air di luar ambang batas.
-*   **Pencapaian Teknis:** Mengurangi ukuran *payload* API sebesar 40% dengan kompresi JSON sisi klien dan mendesain UI dinamis yang adaptif di bawah sinar matahari lapangan.
+Setiap kartu proyek di dalam *timeline* mencakup:
+- Nama & Versi Aplikasi
+- Label Teknologi (*Tech Badges*)
+- Tangkapan Layar Aplikasi
+- Deskripsi & Fitur Utama
+- Akordion Interaktif (Fokus UI/UX, Arsitektur, Log Perbaikan Bug, dll.)
 
-### KendaliBBM - Enterprise Fuel Monitoring System (v3.0)
-*   **Rilis:** Mei 2025
-*   **Teknologi:** SwiftUI, Combine, Rule-Engine
-*   **Deskripsi:** Sistem pengontrol distribusi pasokan solar dari Truk Tangki ke armada alat berat di area tambang.
-*   **Fitur Utama:** Pencatatan meteran digital via QR/Barcode, deteksi anomali konsumsi (*Burn Rate*), dan modul *Security Audit* finansial.
-*   **Pencapaian Teknis:** Membangun *Circular Capacity Gauge* reaktif dan menerapkan *Rule-Engine* sisi klien untuk mencegah *over-capacity input* secara instan.
+## 🛠️ Teknologi yang Digunakan
 
-### SentriSpace - Confined Space Entry Monitor (v2.0)
-*   **Rilis:** Januari 2025
-*   **Teknologi:** SwiftUI, Live Timers, Safety-First UI
-*   **Deskripsi:** Platform monitoring *Health & Safety* (HSE) khusus pengawas keselamatan ruang terbatas (*Hole Watcher*).
-*   **Fitur Utama:** Manajemen izin kerja (*Permit to Work*), pencatatan durasi *shift* presisi, dan pemicu alarm evakuasi otomatis.
-*   **Pencapaian Teknis:** Memanfaatkan *Native Timer* SwiftUI agar berjalan persisten di *background* tanpa membebani *Main Thread*, serta integrasi *Haptic Feedback* untuk peringatan darurat.
+Website portofolio ini dibangun menggunakan teknologi antarmuka modern yang ringan:
+* **HTML5 & CSS3:** Struktur fundamental dan desain tata letak kustom (khususnya desain *Timeline* yang reaktif).
+* **Bootstrap 5 (v5.3.0):** Framework CSS utama untuk *Grid System*, Akordion (*Collapse*), dan utilitas lainnya.
+* **Bootstrap Icons:** Ikon vektor SVG yang ringan untuk antarmuka dan *footer*.
+* **AOS (Animate on Scroll):** Pustaka JavaScript untuk menghadirkan efek transisi elemen saat halaman digulir (*fade-up*, *fade-down*).
+* **Vanilla JavaScript:** Logika sederhana untuk manajemen DOM (seperti fungsionalitas tombol *Back to Top*).
 
-### Estafet - Digital Shift Handover System (v1.0)
-*   **Rilis:** Agustus 2024
-*   **Teknologi:** SwiftUI, State Management
-*   **Deskripsi:** Aplikasi peralihan operasional (*handover*) antar-shift untuk meminimalkan risiko kehilangan data serah terima alat.
-*   **Fitur Utama:** *Acknowledgment Workflow* ketat, validasi tanda tangan digital via PIN, dan *dashboard* mandor terpusat.
-*   **Pencapaian Teknis:** Memodelkan status operasional dengan Swift Enum tersandi dan migrasi ke `@StateObject` untuk mengatasi masalah UI yang tidak melakukan *re-render*.
+## 📂 Kategori Proyek yang Ditampilkan
 
----
+Portofolio ini mencakup rekam jejak pengembangan pada ekosistem **iOS (SwiftUI)** maupun **Web Framework (React/Next.js/Laravel)**, yang diklasifikasikan ke dalam:
 
-## 🏛️ Public Services
+### 1. ⛏️ Mining and Oil & Gas
+Aplikasi kelas *Enterprise* dengan fokus pada arsitektur skala besar, manajemen memori, dan operasional lapangan.
+* **TataBumi:** Mining Operations ERP (SwiftUI, MVVM, MapKit)
+* **Nirwana:** Environmental Management & ESG Analytics (SwiftUI, Charts)
+* **KendaliBBM:** Enterprise Fuel Monitoring System (SwiftUI, Rule-Engine)
+* **SentriSpace:** Confined Space Entry Monitor (SwiftUI, Live Timers)
+* **Estafet:** Digital Shift Handover System (SwiftUI, State Management)
 
-### BAZNAS Jateng - ZIS Management Portal (v2.0)
-*   **Rilis:** Maret 2024
-*   **Teknologi:** Bootstrap 5, Laravel (MVC), MySQL, Payment Gateway
-*   **Deskripsi:** Platform pelayanan publik terpadu untuk optimalisasi pengumpulan dan pendistribusian Zakat, Infak, dan Sedekah (ZIS) di Jawa Tengah.
-*   **Fitur Utama:** Sistem manajemen keuangan transparan, pendataan mustahik berbasis wilayah, integrasi *Multi-channel Payment Gateway*, dan layanan CS responsif.
-*   **Pencapaian Teknis:** Optimasi *Load Balancing* server untuk lonjakan *traffic* Ramadhan dan penerapan *lazy loading* / WebP untuk performa halaman.
+### 2. 🏛️ Public Services
+Sistem terintegrasi untuk melayani kebutuhan masyarakat dan institusi dengan lalu lintas data tinggi.
+* **BAZNAS Jateng:** ZIS Management Portal (Laravel, MySQL, Payment Gateway)
+* **Jemputin:** Circular Economy & Waste Management (Bootstrap 5, Chart.js, Leaflet.js)
 
-### Jemputin - Circular Economy & Waste Management (v1.0)
-*   **Rilis:** November 2023
-*   **Teknologi:** HTML/CSS/JS, Bootstrap 5, Chart.js, Leaflet.js
-*   **Deskripsi:** Platform sirkular ekonomi untuk daur ulang sampah dengan layanan penjemputan dari rumah.
-*   **Fitur Utama:** Kalkulator Emisi CO2, konversi poin *reward* (*QRIS/E-Wallet*), direktori Bank Sampah berbasis peta interaktif, dan modul edukasi.
-*   **Pencapaian Teknis:** Integrasi Leaflet.js untuk pemetaan presisi dan manajemen *state* serta autentikasi lokal berbasis JSON di `LocalStorage`.
+### 3. 🛒 E-Commerce
+Pengembangan produk komersial yang mengutamakan kelancaran transaksi, desain UI dinamis, dan *State Management*.
+* **AppleNation:** Premium Apple Store App (SwiftUI, Combine)
 
----
+### 4. 🌐 Web Applications
+Perangkat lunak utilitas berbasis peramban (*browser*) dengan performa tinggi.
+* **UniversalConverter:** Multi-format File Converter (Next.js 14, Client-side Canvas)
+* **LegacyConverter:** Adobe CC Downgrader (Next.js, Node zlib, Server Actions)
+* **KompresinDONG:** Client-side Image Compressor (React, Web Workers)
+* **Keeptik:** TikTok No-Watermark Downloader (Next.js Server Actions, Proxy)
 
-## 🛍️ E-Commerce
+## 🚀 Cara Menjalankan Secara Lokal
 
-### AppleNation - Premium Apple Store App (v1.0)
-*   **Rilis:** April 2026
-*   **Teknologi:** SwiftUI, Combine, State Management, JSON Encoding
-*   **Deskripsi:** Aplikasi *e-commerce* eksklusif ekosistem Apple dengan antarmuka bertema *Glassmorphism*.
-*   **Fitur Utama:** Katalog interaktif dengan filter dinamis, animasi harga *real-time* berbasis varian, dan sistem *checkout* terintegrasi.
-*   **Pencapaian Teknis:** Penggunaan `EnvironmentObject` global untuk sinkronisasi state keranjang/pesanan dan penerapan persistensi data lokal otomatis via `UserDefaults`.
+Karena proyek ini merupakan HTML statis murni, tidak ada proses kompilasi khusus (*build process*) yang diperlukan.
 
----
-
-## 🛠️ Ringkasan Teknologi
-
-| Kategori | Teknologi Utama |
-| :--- | :--- |
-| **iOS / Apple Platforms** | SwiftUI, Combine, Swift Charts, MapKit, CoreLocation |
-| **Arsitektur Mobile** | MVVM, Router-based View, State Management, Rule-Engine |
-| **Web Frontend** | HTML/CSS/JS, Bootstrap 5, Chart.js, Leaflet.js |
-| **Backend & Database** | Laravel (MVC), MySQL, REST API Integration |
-| **Integrasi Eksternal** | Payment Gateway, IoT WebSocket, Geotagging |
-
-<br>
-
-*Dokumen ini dihasilkan berdasarkan portofolio interaktif pada ./Takhiyuddin.com.*
+1. **Clone repositori ini:**
+   ```bash
+   git clone [https://github.com/takhiyuddin/takhiyuddin.github.io.git](https://github.com/takhiyuddin/takhiyuddin.github.io.git)
