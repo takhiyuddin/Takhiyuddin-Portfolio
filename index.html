@@ -69,7 +69,6 @@
         z-index: 2;
       }
 
-      /* Remove bottom margin on the last project of each category */
       .timeline-item:last-child {
         margin-bottom: 0;
       }
@@ -129,14 +128,18 @@
         border-radius: 50%;
         outline: 6px solid #f8f9fa;
         margin-top: 4px;
+        /* Modern Spring Transition */
         transition:
-          transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-          background-color 0.3s ease;
+          transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+          outline 0.4s ease,
+          background-color 0.4s ease;
       }
 
+      /* Hover Effect for Dot */
       .timeline-item:hover .timeline-dot {
-        transform: scale(1.5);
-        background-color: #4b5563;
+        transform: scale(1.3);
+        background-color: #111827;
+        outline: 8px solid #e5e7eb;
       }
 
       /* Right Column (Project Content) */
@@ -153,6 +156,7 @@
         transition: color 0.3s ease;
       }
 
+      /* Tech Badges with Micro-interaction */
       .tech-badge {
         font-weight: 500;
         font-size: 0.75rem;
@@ -164,25 +168,35 @@
         margin-right: 6px;
         margin-bottom: 10px;
         display: inline-block;
-        transition: all 0.3s ease;
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s ease,
+          border-color 0.4s ease;
         cursor: default;
       }
 
+      .tech-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        border-color: #d1d5db;
+      }
+
+      /* Images with Modern Floating Hover */
       .project-image {
         width: 100%;
         height: auto;
-        border-radius: 8px;
+        border-radius: 12px;
         border: 1px solid #e5e7eb;
         margin: 20px 0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
         transition:
-          transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-          box-shadow 0.5s ease;
+          transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      .project-image:hover {
-        transform: translateY(-5px) scale(1.01);
-        box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+      .timeline-item:hover .project-image {
+        transform: translateY(-8px);
+        box-shadow: 0 22px 45px -8px rgba(0, 0, 0, 0.12);
       }
 
       /* Feature List */
@@ -208,7 +222,7 @@
         color: #9ca3af;
       }
 
-      /* Accordion */
+      /* Accordion Refinements */
       .accordion-item {
         border: none;
         border-bottom: 1px solid #e5e7eb;
@@ -226,11 +240,17 @@
         background: transparent !important;
         box-shadow: none !important;
         font-size: 0.9rem;
-        transition: color 0.3s ease;
+        transition:
+          color 0.3s ease,
+          padding-left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       .accordion-button:not(.collapsed) {
         color: #000;
+      }
+
+      .accordion-button:hover {
+        color: #111827;
       }
 
       .accordion-body {
@@ -296,13 +316,15 @@
       .social-link {
         color: #6b7280;
         font-size: 1.5rem;
-        transition: all 0.3s ease;
         display: inline-block;
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          color 0.3s ease;
       }
 
       .social-link:hover {
         color: #111827;
-        transform: translateY(-3px);
+        transform: translateY(-4px) scale(1.1);
       }
 
       .footer-text {
@@ -312,9 +334,7 @@
         margin-bottom: 5px;
       }
 
-      /* ========================================= */
-      /* Back to Top Button Styles                */
-      /* ========================================= */
+      /* Back to Top Button Styles */
       #backToTopBtn {
         position: fixed;
         bottom: 30px;
@@ -333,21 +353,22 @@
         cursor: pointer;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(20px);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Spring animation for appear */
+        transform: translateY(30px) scale(0.9);
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         z-index: 999;
       }
 
       #backToTopBtn.show {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
       }
 
       #backToTopBtn:hover {
         background-color: #374151;
-        transform: translateY(-5px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       }
 
       @media (max-width: 768px) {
@@ -363,11 +384,7 @@
   </head>
   <body>
     <!-- Header 1: Mining and Oil & Gas -->
-    <header
-      class="portfolio-header"
-      data-aos="fade-down"
-      data-aos-duration="800"
-    >
+    <header class="portfolio-header" data-aos="fade-down">
       <div>
         <h1
           style="font-size: 1.7rem; font-weight: 800; margin: 0; color: #111827"
@@ -393,13 +410,13 @@
 
       <!-- ==================== PROJECT 1: TATABUMI ERP ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">March 20, 2026</span>
           <span class="version-badge">v5.4.2</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">TataBumi - Mining Operations ERP</h3>
           <div>
             <span class="tech-badge">SwiftUI</span>
@@ -560,13 +577,13 @@
 
       <!-- ==================== PROJECT 2: NIRWANA ESG ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">October 1, 2025</span>
           <span class="version-badge">v4.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">
             Nirwana - Environmental Management & ESG Analytics
           </h3>
@@ -726,13 +743,13 @@
 
       <!-- ==================== PROJECT 3: KENDALIBBM ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">May 15, 2025</span>
           <span class="version-badge">v3.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">
             KendaliBBM - Enterprise Fuel Monitoring System
           </h3>
@@ -892,13 +909,13 @@
 
       <!-- ==================== PROJECT 4: SENTRISPACE ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">January 10, 2025</span>
           <span class="version-badge">v2.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">
             SentriSpace - Confined Space Entry Monitor
           </h3>
@@ -1056,13 +1073,13 @@
 
       <!-- ==================== PROJECT 5: ESTAFET ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">August 12, 2024</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">Estafet - Digital Shift Handover System</h3>
           <div>
             <span class="tech-badge">SwiftUI</span>
@@ -1216,10 +1233,12 @@
       </div>
     </section>
 
-    <!-- ======================================================================= -->
-    <!-- DIVIDER FOR NEW CATEGORY 2 (AUTOMOTIVE & IOT) -->
-    <!-- ======================================================================= -->
-    <div class="container" style="margin-top: 10px; margin-bottom: 10px">
+    <!-- DIVIDER -->
+    <div
+      class="container"
+      style="margin-top: 10px; margin-bottom: 10px"
+      data-aos="zoom-in"
+    >
       <hr
         style="
           border: 0;
@@ -1234,13 +1253,10 @@
       />
     </div>
 
-    <!-- ======================================================================= -->
     <!-- HEADER CATEGORY 2: AUTOMOTIVE & IOT -->
-    <!-- ======================================================================= -->
     <header
       class="portfolio-header"
       data-aos="fade-down"
-      data-aos-duration="800"
       style="padding-top: 10px"
     >
       <div>
@@ -1263,13 +1279,13 @@
 
       <!-- ==================== PROJECT 1: MONARCHMAP ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">April 23, 2026</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">MonarchMap - ECU Tuning & Telemetry</h3>
           <div>
             <span class="tech-badge">SwiftUI</span>
@@ -1435,10 +1451,12 @@
       </div>
     </section>
 
-    <!-- ======================================================================= -->
-    <!-- DIVIDER FOR CATEGORY 3: PUBLIC SERVICES -->
-    <!-- ======================================================================= -->
-    <div class="container" style="margin-top: 10px; margin-bottom: 10px">
+    <!-- DIVIDER -->
+    <div
+      class="container"
+      style="margin-top: 10px; margin-bottom: 10px"
+      data-aos="zoom-in"
+    >
       <hr
         style="
           border: 0;
@@ -1453,13 +1471,10 @@
       />
     </div>
 
-    <!-- ======================================================================= -->
     <!-- HEADER CATEGORY 3: PUBLIC SERVICES -->
-    <!-- ======================================================================= -->
     <header
       class="portfolio-header"
       data-aos="fade-down"
-      data-aos-duration="800"
       style="padding-top: 10px"
     >
       <div>
@@ -1482,13 +1497,13 @@
 
       <!-- ==================== PROJECT 1: BAZNAS JATENG ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">March 10, 2024</span>
           <span class="version-badge">v2.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">BAZNAS Jateng - ZIS Management Portal</h3>
           <div>
             <span class="tech-badge">Bootstrap 5</span>
@@ -1654,13 +1669,13 @@
 
       <!-- ==================== PROJECT 2: JEMPUTIN ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">November 15, 2023</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">
             Jemputin - Circular Economy & Waste Management
           </h3>
@@ -1832,10 +1847,12 @@
       </div>
     </section>
 
-    <!-- ======================================================================= -->
-    <!-- DIVIDER FOR CATEGORY 4 (E-COMMERCE) -->
-    <!-- ======================================================================= -->
-    <div class="container" style="margin-top: 10px; margin-bottom: 10px">
+    <!-- DIVIDER -->
+    <div
+      class="container"
+      style="margin-top: 10px; margin-bottom: 10px"
+      data-aos="zoom-in"
+    >
       <hr
         style="
           border: 0;
@@ -1850,13 +1867,10 @@
       />
     </div>
 
-    <!-- ======================================================================= -->
     <!-- HEADER CATEGORY 4: E-COMMERCE -->
-    <!-- ======================================================================= -->
     <header
       class="portfolio-header"
       data-aos="fade-down"
-      data-aos-duration="800"
       style="padding-top: 10px"
     >
       <div>
@@ -1879,13 +1893,13 @@
 
       <!-- ==================== PROJECT 1: APPLENATION ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">April 26, 2026</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">AppleNation - Premium Apple Store App</h3>
           <div>
             <span class="tech-badge">SwiftUI</span>
@@ -2051,10 +2065,12 @@
       </div>
     </section>
 
-    <!-- ======================================================================= -->
-    <!-- DIVIDER CATEGORY 5 (WEB APPLICATION) -->
-    <!-- ======================================================================= -->
-    <div class="container" style="margin-top: 10px; margin-bottom: 10px">
+    <!-- DIVIDER -->
+    <div
+      class="container"
+      style="margin-top: 10px; margin-bottom: 10px"
+      data-aos="zoom-in"
+    >
       <hr
         style="
           border: 0;
@@ -2069,13 +2085,10 @@
       />
     </div>
 
-    <!-- ======================================================================= -->
     <!-- HEADER CATEGORY 5: WEB APPLICATION -->
-    <!-- ======================================================================= -->
     <header
       class="portfolio-header"
       data-aos="fade-down"
-      data-aos-duration="800"
       style="padding-top: 10px"
     >
       <div>
@@ -2098,13 +2111,13 @@
 
       <!-- ==================== PROJECT 1: UNIVERSAL CONVERTER ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">July 18, 2026</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">
             UniversalConverter - Multi-format File Converter
           </h3>
@@ -2251,13 +2264,13 @@
 
       <!-- ==================== PROJECT 2: LEGACY CONVERTER ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">June 5, 2026</span>
           <span class="version-badge">v1.2</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">LegacyConverter - Adobe CC Downgrader</h3>
           <div>
             <span class="tech-badge">Next.js</span>
@@ -2402,13 +2415,13 @@
 
       <!-- ==================== PROJECT 3: KOMPRESINDONG ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">April 10, 2026</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">
             KompresinDONG - Client-side Image Compressor
           </h3>
@@ -2554,13 +2567,13 @@
 
       <!-- ==================== PROJECT 4: KEEPTIK ==================== -->
       <div class="timeline-item">
-        <div class="timeline-left">
+        <div class="timeline-left" data-aos="fade-right">
           <span class="date-text">February 20, 2026</span>
           <span class="version-badge">v2.1</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
 
-        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+        <div class="timeline-right" data-aos="fade-up" data-aos-delay="150">
           <h3 class="project-title">
             Keeptik - TikTok No-Watermark Downloader
           </h3>
@@ -2705,12 +2718,9 @@
       </div>
     </section>
 
-    <!-- ======================================================================= -->
     <!-- FOOTER -->
-    <!-- ======================================================================= -->
-    <footer class="footer-section" data-aos="fade-up" data-aos-duration="800">
+    <footer class="footer-section" data-aos="fade-up">
       <div style="max-width: 900px; margin: 0 auto">
-        <!-- Social Media Links -->
         <div class="social-links">
           <a
             href="https://github.com/takhiyuddin"
@@ -2732,14 +2742,11 @@
             <i class="bi bi-instagram"></i>
           </a>
         </div>
-        <!-- Copyright -->
         <p class="footer-text">&copy; 2026 Takhiyuddin. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- ========================================= -->
-    <!-- Back to Top Button Element                -->
-    <!-- ========================================= -->
+    <!-- Back to Top Button Element -->
     <button id="backToTopBtn" aria-label="Back to top">
       <i class="bi bi-arrow-up-short"></i>
     </button>
@@ -2750,19 +2757,17 @@
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      // Konfigurasi Modern AOS
       AOS.init({
         once: true,
-        offset: 80,
-        easing: "ease-out-cubic",
-        distance: "40px",
+        offset: 60,
+        duration: 900, // Dibuat lebih panjang untuk kesan rileks dan mulus
+        easing: "ease-out-cubic", // Kurva animasi yang terasa ringan
       });
 
-      // ========================================= //
-      // Back to Top Button Logic                  //
-      // ========================================= //
+      // Back to Top Button Logic
       const backToTopBtn = document.getElementById("backToTopBtn");
 
-      // Show or hide the button when scrolling
       window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
           backToTopBtn.classList.add("show");
@@ -2771,7 +2776,6 @@
         }
       });
 
-      // Scroll back to top with smooth animation when clicked
       backToTopBtn.addEventListener("click", () => {
         window.scrollTo({
           top: 0,
