@@ -394,7 +394,7 @@
       <!-- ==================== PROJECT 1: TATABUMI ERP ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">2024 - 2026</span>
+          <span class="date-text">March 20, 2026</span>
           <span class="version-badge">v5.4.2</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -1217,7 +1217,7 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- DIVIDER FOR NEW CATEGORY -->
+    <!-- DIVIDER FOR NEW CATEGORY 2 (AUTOMOTIVE & IOT) -->
     <!-- ======================================================================= -->
     <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
@@ -1235,7 +1235,227 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- HEADER CATEGORY 2: PUBLIC SERVICES -->
+    <!-- HEADER CATEGORY 2: AUTOMOTIVE & IOT -->
+    <!-- ======================================================================= -->
+    <header
+      class="portfolio-header"
+      data-aos="fade-down"
+      data-aos-duration="800"
+      style="padding-top: 10px"
+    >
+      <div>
+        <h2
+          style="
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 5px 0 0 0;
+          "
+        >
+          Automotive & IoT Solutions
+        </h2>
+      </div>
+    </header>
+
+    <!-- Main Timeline 2: Automotive & IoT -->
+    <section class="timeline-container" style="padding-bottom: 20px">
+      <div class="timeline-line"></div>
+
+      <!-- ==================== PROJECT 1: MONARCHMAP ==================== -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="date-text">April 23, 2026</span>
+          <span class="version-badge">v1.0</span>
+        </div>
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+
+        <div class="timeline-right" data-aos="fade-up" data-aos-duration="1000">
+          <h3 class="project-title">MonarchMap - ECU Tuning & Telemetry</h3>
+          <div>
+            <span class="tech-badge">SwiftUI</span>
+            <span class="tech-badge">CoreBluetooth</span>
+            <span class="tech-badge">Swift Charts</span>
+            <span class="tech-badge">Hardware I/O</span>
+          </div>
+
+          <img
+            src="assets/MonarchMap.png"
+            alt="MonarchMap IoT App"
+            class="project-image"
+          />
+
+          <ul class="feature-list">
+            <li>
+              Aplikasi <em>Mobile Tuning</em> iOS yang terhubung langsung ke ECU
+              Motor via Bluetooth (BLE) untuk membaca dan mengubah parameter
+              mesin secara <em>Real-time</em>.
+            </li>
+            <li>
+              Fitur <strong>Live Tracing</strong> pada Fuel Mapping & Ignition
+              Timing untuk melacak sel matriks RPM dan TPS yang sedang aktif
+              saat mesin menyala.
+            </li>
+            <li>
+              Visualisasi dinamis dan diagnostik menggunakan
+              <em>Swift Charts</em> untuk Data Logging RPM vs Waktu.
+            </li>
+            <li>
+              Sistem <em>Auto-Detect Universal</em> yang mampu mengenali merk
+              motor dan jenis ECU secara otomatis, beserta generator
+              <em>PDF Tuning Report</em>.
+            </li>
+          </ul>
+
+          <div class="accordion accordion-flush" id="accordionMonarch">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingMonarch1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseMonarch1"
+                  aria-expanded="false"
+                  aria-controls="collapseMonarch1"
+                >
+                  IoT CoreBluetooth & Binary Hex Parsing
+                </button>
+              </h2>
+              <div
+                id="collapseMonarch1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionMonarch"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Membangun <code>BluetoothManager</code> berbasis
+                      <em>Delegate Pattern</em> untuk memindai, terhubung, dan
+                      menjaga kestabilan sinyal BLE dengan modul perangkat
+                      keras.
+                    </li>
+                    <li>
+                      Menerapkan algoritma
+                      <em>Hexadecimal & Byte Parsing</em> untuk merakit struktur
+                      paket data standar otomotif (Header + CMD + Length +
+                      Payload + Checksum) sebelum dikirim ke ECU.
+                    </li>
+                    <li>
+                      Melakukan injeksi data ke
+                      <em>Characteristic UUID</em> secara asinkron tanpa
+                      memblokir UI (<em>Without Response</em>).
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingMonarch2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseMonarch2"
+                  aria-expanded="false"
+                  aria-controls="collapseMonarch2"
+                >
+                  Interactive UI & Custom Render Engine
+                </button>
+              </h2>
+              <div
+                id="collapseMonarch2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionMonarch"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Mengembangkan komponen
+                      <strong>Apple-style Circular Gauge</strong> interaktif
+                      pada modul Kalibrasi TPS menggunakan kombinasi
+                      <code>AngularGradient</code> dan `trim` animasi.
+                    </li>
+                    <li>
+                      Membuat Matriks Sel yang responsif (Fuel, Ignition,
+                      Injector SoI) dengan efek <em>Glow Highlight</em> dinamis
+                      ketika <em>Live Tracing</em> menyala mengikuti pergerakan
+                      gas.
+                    </li>
+                    <li>
+                      Integrasi ekstensif
+                      <code>UIImpactFeedbackGenerator</code> untuk memberikan
+                      <em>Haptic Feedback</em> (getaran) mekanikal saat
+                      <em>tuner</em> mengubah parameter mesin.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingMonarch3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseMonarch3"
+                  aria-expanded="false"
+                  aria-controls="collapseMonarch3"
+                >
+                  Data Persistence & PDF Generation
+                </button>
+              </h2>
+              <div
+                id="collapseMonarch3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionMonarch"
+              >
+                <div class="accordion-body">
+                  <ul class="feature-list mb-0">
+                    <li>
+                      Penyimpanan lokal menggunakan pengkodean
+                      <code>JSONEncoder/Decoder</code> dan
+                      <code>@AppStorage</code> untuk menjaga map
+                      <em>Dual Band</em> agar tidak hilang saat aplikasi
+                      ditutup.
+                    </li>
+                    <li>
+                      Membuat engine <em>Export to CSV</em> dan merender grafik
+                      log untuk dibagikan via <em>Native Share Sheet iOS</em>.
+                    </li>
+                    <li>
+                      Merakit laporan kustom berformat PDF menggunakan
+                      <code>UIGraphicsPDFRenderer</code> secara
+                      <em>on-the-fly</em> berdasarkan data limit RPM dan
+                      identitas motor klien.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- DIVIDER FOR CATEGORY 3: PUBLIC SERVICES -->
+    <!-- ======================================================================= -->
+    <div class="container" style="margin-top: 10px; margin-bottom: 10px">
+      <hr
+        style="
+          border: 0;
+          height: 1px;
+          background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0)
+          );
+        "
+      />
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- HEADER CATEGORY 3: PUBLIC SERVICES -->
     <!-- ======================================================================= -->
     <header
       class="portfolio-header"
@@ -1257,7 +1477,7 @@
       </div>
     </header>
 
-    <!-- Main Timeline 2: Public Services -->
+    <!-- Main Timeline 3: Public Services -->
     <section class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
@@ -1614,7 +1834,7 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- DIVIDER FOR NEW CATEGORY 3 (E-COMMERCE) -->
+    <!-- DIVIDER FOR CATEGORY 4 (E-COMMERCE) -->
     <!-- ======================================================================= -->
     <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
@@ -1632,7 +1852,7 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- HEADER CATEGORY 3: E-COMMERCE -->
+    <!-- HEADER CATEGORY 4: E-COMMERCE -->
     <!-- ======================================================================= -->
     <header
       class="portfolio-header"
@@ -1654,7 +1874,7 @@
       </div>
     </header>
 
-    <!-- Main Timeline 3: E-Commerce -->
+    <!-- Main Timeline 4: E-Commerce -->
     <section class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
@@ -1833,7 +2053,7 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- DIVIDER CATEGORY 4 (WEB APPLICATION) -->
+    <!-- DIVIDER CATEGORY 5 (WEB APPLICATION) -->
     <!-- ======================================================================= -->
     <div class="container" style="margin-top: 10px; margin-bottom: 10px">
       <hr
@@ -1851,7 +2071,7 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- HEADER CATEGORY 4: WEB APPLICATION -->
+    <!-- HEADER CATEGORY 5: WEB APPLICATION -->
     <!-- ======================================================================= -->
     <header
       class="portfolio-header"
@@ -1873,14 +2093,14 @@
       </div>
     </header>
 
-    <!-- Main Timeline 4: Web Application -->
+    <!-- Main Timeline 5: Web Application -->
     <section class="timeline-container" style="padding-bottom: 20px">
       <div class="timeline-line"></div>
 
       <!-- ==================== PROJECT 1: UNIVERSAL CONVERTER ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">July 2026</span>
+          <span class="date-text">July 18, 2026</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -2033,7 +2253,7 @@
       <!-- ==================== PROJECT 2: LEGACY CONVERTER ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">June 2026</span>
+          <span class="date-text">June 05, 2026</span>
           <span class="version-badge">v1.2</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -2184,7 +2404,7 @@
       <!-- ==================== PROJECT 3: KOMPRESINDONG ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">April 2026</span>
+          <span class="date-text">April 10, 2026</span>
           <span class="version-badge">v1.0</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
@@ -2336,7 +2556,7 @@
       <!-- ==================== PROJECT 4: KEEPTIK ==================== -->
       <div class="timeline-item">
         <div class="timeline-left">
-          <span class="date-text">February 2026</span>
+          <span class="date-text">February 20, 2026</span>
           <span class="version-badge">v2.1</span>
         </div>
         <div class="timeline-marker"><div class="timeline-dot"></div></div>
